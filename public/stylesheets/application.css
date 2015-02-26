@@ -4,7 +4,41 @@
   min-height: 100px;
 }
 
-.navbar-nav, .navbar-right {
+.btn-group, .float-right {
   float: right;
+}
 
+.btn, .drop_button_height {
+  padding: 39px 12px;
+}
+
+.navbar-brand, .navbar-logo {
+  height: 100px;
+}
+
+.background {
+    max-width: 100%;
+    height: 900px;
+    background:url('../img/background_texture.jpg');
+}
+
+.colour_overlay {
+    background-color: rgba(34, 34, 34, 0.85);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.test {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: RED;
+  color: blue;
+  width: 400px;
+  height: 400px;
+}
+
+.container2{
+  margin-top: 100px;
 }
