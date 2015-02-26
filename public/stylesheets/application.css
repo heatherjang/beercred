@@ -1,0 +1,10 @@
+.navbar-inverse .navbar-collapse, .navbar-yellow {
+  background-color: #eabc00;
+  background-image: linear-gradient(to bottom, #eabc00 0, #eabc00 100%) ;
+  min-height: 100px;
+}
+
+.navbar-nav, .navbar-right {
+  float: right;
+
+}
