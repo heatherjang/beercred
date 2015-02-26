@@ -30,7 +30,7 @@ end
 desc "populate db"
 task "db:populate" do
   puts "Populating Database"
-  User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test")
+  User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "123456789")
   Admin.create(email: "God@fridge.beer", username: "God", password: "test")
 end
 
@@ -40,7 +40,7 @@ task "db:view" do
   users = User.all
   if users.size > 0
     users.each do |user|
-      puts "Name #{user.username}, E-mail #{user.email}, Password: #{user.password}"
+      puts "Name #{user.username}, E-mail #{user.email}, Password: #{user.password}, Credit Card: #{user.credit_card}"
     end
   else
     puts "No Useres in database"
