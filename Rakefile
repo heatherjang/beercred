@@ -2,21 +2,58 @@ require 'rake'
 require "sinatra/activerecord/rake"
 require ::File.expand_path('../config/environment', __FILE__)
 
-Rake::Task["db:create"].clear
-Rake::Task["db:drop"].clear
 
-# NOTE: Assumes SQLite3 DB
-desc "create the database"
-task "db:create" do
-  touch 'db/db.sqlite3'
+desc "clean db"
+task "db:clean" do
+  users = User.all
+  if users
+    users.each do |user|
+      puts "deleting #{user.username}"
+      user.destroy
+    end
+    puts "Users deleted"
+  else
+    puts "No users to delete"
+  end
+  admins = Admin.all
+  if admins
+    admins.each do |admin|
+      puts "deleting #{admin.username}"
+      admin.destroy
+    end
+    puts "Admins deleted"
+  else
+    puts "No admins to delete"
+  end
 end
 
-desc "drop the database"
-task "db:drop" do
-  rm_f 'db/db.sqlite3'
+desc "populate db"
+task "db:populate" do
+  puts "Populating Database"
+  User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "123456789")
+  User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "123456789")
+
+  Admin.create(email: "God@fridge.beer", username: "God", password: "test")
 end
 
-desc 'Retrieves the current schema version number'
-task "db:version" do
-  puts "Current version: #{ActiveRecord::Migrator.current_version}"
+desc "view db"
+task "db:view" do
+  puts "Users:"
+  users = User.all
+  if users.size > 0
+    users.each do |user|
+      puts "Name #{user.username}, E-mail #{user.email}, Password: #{user.password}, Credit Card: #{user.credit_card}"
+    end
+  else
+    puts "No Useres in database"
+  end
+  puts "Admins:"
+  admins = Admin.all
+  if admins.size > 0
+    admins.each do |admin|
+      puts "Name #{admin.username}, E-mail #{admin.email}, Password: #{admin.password}"
+    end
+  else
+    puts "No Admins in database"
+  end
 end

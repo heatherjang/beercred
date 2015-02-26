@@ -1,0 +1,6 @@
+class Admin < ActiveRecord::Base
+  has_many :users
+
+  validates :email, presence: true, uniqueness: true
+  validates :password, presence: true
+end
