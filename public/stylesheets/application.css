@@ -8,9 +8,20 @@
   float: right;
 }
 
-.btn, .drop_button_height {
+.drop_button_height {
   padding: 39px 12px;
 }
+
+.btn-buybeer {
+  height: 200px;
+  width: 400px;
+  border-radius: 10%;
+}
+
+.wrapper {
+  text-align: center;
+}
+
 
 .navbar-brand, .navbar-logo {
   height: 100px;
