@@ -31,6 +31,8 @@ desc "populate db"
 task "db:populate" do
   puts "Populating Database"
   User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "123456789")
+  User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "123456789")
+
   Admin.create(email: "God@fridge.beer", username: "God", password: "test")
 end
 
