@@ -81,6 +81,8 @@
   </div>
 
   <%= session.inspect %>
+  <%= Transaction.last.num_purchased %>
+  <%= Transaction.last.created_at %>
 
 </body>
 </html>
