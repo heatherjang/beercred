@@ -2,7 +2,7 @@
 
 # helpers do
 #   # Returns the logged in user
-#   # Returns nil if the user is not logged in
+#   # Re`turns nil if the user is not logged in
 #   def current_user
 #     if session[:user_id]
 #       User.find(session[:user_id])
@@ -13,6 +13,13 @@
 get '/' do
   erb :index
 end
+get '/user' do
+  erb :'/user/index'
+end
+
+get '/admin' do
+  erb :'/admin/index'
+end
 
 get '/users/new' do
   erb :'users/new'
@@ -22,10 +29,6 @@ get '/users/:id' do
   @user = User.find params[:id]
   @users = User.all
   erb :'users/show'
-end
-
-get '/admin' do
-  erb :'admin'
 end
 
 post '/' do
