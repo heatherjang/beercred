@@ -13,52 +13,47 @@
 get '/' do
   erb :index
 end
-get '/user' do
-  erb :'/user/index'
+
+get '/user/:id' do
+## MUST SET session[:user_id] before uncommenting
+  # @user = User.find session[:user_id]
+  erb :'/user'
 end
 
 get '/admin' do
   erb :'/admin/index'
 end
 
-get '/users/new' do
-  erb :'users/new'
-end
-
-get '/users/:id' do
-  @user = User.find params[:id]
-  @users = User.all
-  erb :'users/show'
+get '/user/new' do
+  redirect '/'
 end
 
 post '/' do
   user = User.find_by(email: params[:email])
   if user && user.password == params[:password]
     session[:user_id] = user.id
-    redirect "/"
+    redirect '/user/:id'
   else
-    erb :'users/new'
+    redirect '/'
   end
 end
 
-post '/users/new' do 
+post '/user' do 
   @user = User.new(
     email: params[:email],
     password: params[:password],
     username: params[:username]
   )
   if @user.save
-    redirect '/users'
+    session[:user_id] = user.id
+    redirect '/user/:id'
   else
-    erb :'users/new'
+    redirect '/'
   end
 end
 
-delete '/user' do
-  session[:user_id] = nil
-  redirect "/"
-end
 
+# USING FOR TESTING, DELETE ONCE IMPLEMENTS ON MAIN PAGES
 get '/beer' do
   # do something
   erb :'/test_stripe'
