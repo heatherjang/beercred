@@ -4,7 +4,6 @@
   width: 100%;
   background-color: gray;
   border-radius: 10px;
-
 }
 
 .stats_title {
@@ -60,6 +59,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+
+/* Index */
+.call_to_action {
+  color: white;
 }
 
 
