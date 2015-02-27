@@ -50,3 +50,22 @@
   width: 75%;
 }
 
+
+/* Admin */
+.inventory {
+  border-radius: 10px;
+}
+
+.okay {
+  background-color: green;
+}
+
+.low {
+  background-color: red;
+}
+
+
+
+
+
+

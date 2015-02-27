@@ -18,3 +18,28 @@
     </div>    
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+  <!-- Displays inventory status & total inventory -->
+    <div class="col-md-4">
+    <!-- custom erb code here -->
+    <!-- if inventory okay: -->
+      <div class="inventory okay">
+        <h1>Your inventory is okay </h1>
+        <p> Beers remaining: </p>
+        <h1>custom erb display remaining inventory</h1>
+      </div>
+    <!-- else inventory low: -->
+      <div class="inventory low">
+        <h1>Your inventory is low</h1>
+        <p> Beers remaining: </p>
+        <h1>custom erb display remaining inventory</h1>
+      </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
