@@ -28,6 +28,13 @@ get '/user/:id' do
   end
 end
 
+post '/user/buy_beer' do
+  @user = User.find(session[:user_id])
+  @user.beer_count += params[:num_beers].to_i
+  @user.save
+  redirect 'user/:id'
+end
+
 get '/admin' do
   erb :'/admin/index'
 end
