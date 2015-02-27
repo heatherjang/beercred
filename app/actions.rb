@@ -82,3 +82,11 @@ post '/beer' do
   erb :'/test_stripe'
 end
 
+# FOR TESTING NAVBAR DESIGNS; DELETE AFTER IMPLEMENTED
+get '/navbar_user' do
+  erb :navbar_user
+end
+
+get '/navbar_index' do
+  erb :navbar_index
+end
