@@ -19,7 +19,7 @@ get '/' do
 end
 
 get '/user/:id' do
-## MUST SET session[:user_id] before uncommenting
+## MUST create login form before uncommenting
   if logged_in?
     # @user = User.find session[:user_id]
     erb :'/user/index'
