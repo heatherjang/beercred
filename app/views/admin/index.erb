@@ -6,7 +6,8 @@
     <div class="col-md-3">
       <div class="stats_box">
         <h2 class="stats_title">Number of beers purchased (since time?)</h2>
-        <h3 class="stats_value">Insert erb code (beer_count total)</h3>
+        <!-- #erb#: beer_count total -->
+        <h3 class="stats_value">#erb#</h3>
       </div>
     </div>
     <div class="col-md-2">
@@ -15,7 +16,8 @@
     <div class="col-md-3">
       <div class="stats_box">
         <h2 class="stats_title">Total revenue (since time?)</h2>
-        <h3 class="stats_value">Insert erb code (beer_count total * beer cost)</h3>
+        <!-- #erb#: beer_count total * beer cost -->
+        <h3 class="stats_value">#erb#</h3>
       </div>
     </div>
     <div class="col-md-2">
@@ -29,21 +31,39 @@
     </div>
   <!-- Displays inventory status & total inventory -->
     <div class="col-md-4">
-    <!-- custom erb code here -->
-    <!-- if inventory okay: -->
+    <!-- #erb# code here -->
+      <!-- if inventory okay: -->
       <div class="inventory okay">
         <h2 class="inventory_title">Your inventory is okay </h2>
-        <h3 class="inventory_value"> Beers remaining: </h3>
-        <h2>custom erb display remaining inventory</h2>
+        <h3 class="inventory_title"> Beers remaining: </h3>
+        <h4 class="inventory_value">custom erb display remaining inventory</h4>
       </div>
-    <!-- else inventory low: -->
+      <!-- else inventory low: -->
       <div class="inventory low">
-        <h3>Restock!</h3>
-        <h2 class="inventory_title"> Beers remaining: </h2>
-        <h2 class="inventory_value">custom erb display remaining inventory</h2>
+        <h2 class="inventory_title">Restock!</h2>
+        <h3 class="inventory_title"> Beers remaining: </h3>
+        <h4 class="inventory_value">custom erb display remaining inventory</h4>
       </div>
+      <!-- end -->
     </div>
     <div class="col-md-4">
     </div>
   </div>
 </div>
+
+<!-- Display table: consumer name, # beers bought, $spent -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>
+
+
+
+
+
