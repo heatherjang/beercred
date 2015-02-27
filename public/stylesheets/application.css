@@ -34,7 +34,28 @@
 
 /* General styling */
 .stats_box {
+  height: 100%;
+  width: 100%;
   background-color: gray;
+  border-radius: 10px;
+
+}
+
+.stats_title {
+  font-family: Helvetica;
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.stats_value {
+  font-family: Helvetica;
+  font-size: 3em;
+  font-weight: 900;
+
+}
+
+.position_fixed {
+  position: static;
 }
 
 

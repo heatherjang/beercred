@@ -1,25 +1,29 @@
-<div class="container-fluid">
+<div class="container-fluid position_fixed">
   <div class="row">
     <div class="col-md-2">
     </div>
   <!-- Displays total beer # purchases (count) -->
-    <div class="col-md-3 stats_box">
-      <h1>Number of beers purchased (since time?)</h1>
-      <h2>Insert erb code (beer_count total)</h2>
+    <div class="col-md-3">
+      <div class="stats_box">
+        <h2 class="stats_title">Number of beers purchased (since time?)</h2>
+        <h3 class="stats_value">Insert erb code (beer_count total)</h3>
+      </div>
     </div>
     <div class="col-md-2">
     </div>
   <!-- Displays total beer purchases ($) -->
-    <div class="col-md-3 stats_box">
-      <h1>Total revenue (since time?)</h1>
-      <h2>Insert erb code (beer_count total * beer cost)</h2>
+    <div class="col-md-3">
+      <div class="stats_box">
+        <h2 class="stats_title">Total revenue (since time?)</h2>
+        <h3 class="stats_value">Insert erb code (beer_count total * beer cost)</h3>
+      </div>
     </div>
     <div class="col-md-2">
     </div>    
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid position_fixed">
   <div class="row">
     <div class="col-md-4">
     </div>
@@ -28,15 +32,15 @@
     <!-- custom erb code here -->
     <!-- if inventory okay: -->
       <div class="inventory okay">
-        <h1>Your inventory is okay </h1>
-        <p> Beers remaining: </p>
-        <h1>custom erb display remaining inventory</h1>
+        <h3>Your inventory is okay </h3>
+        <h2> Beers remaining: </h2>>
+        <h2>custom erb display remaining inventory</h2>
       </div>
     <!-- else inventory low: -->
       <div class="inventory low">
-        <h1>Your inventory is low</h1>
-        <p> Beers remaining: </p>
-        <h1>custom erb display remaining inventory</h1>
+        <h3>Restock!</h3>
+        <h2> Beers remaining: </h2>
+        <h2>custom erb display remaining inventory</h2>
       </div>
     </div>
     <div class="col-md-4">
