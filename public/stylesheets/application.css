@@ -32,6 +32,12 @@
 }
 
 
+/* General styling */
+.stats_box {
+  background-color: gray;
+}
+
+
 /* User */
 .btn-buybeer {
   height: 200px;
@@ -42,10 +48,5 @@
 
 .form_input_num_beers {
   width: 75%;
-}
-
-.num_beers {
-  width: 25%;
-  background-color: gray;
 }
 
