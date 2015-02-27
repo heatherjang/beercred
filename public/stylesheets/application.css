@@ -1,36 +1,20 @@
+/* Layout */
 .navbar-inverse .navbar-collapse, .navbar-yellow {
   background-color: #eabc00;
   background-image: linear-gradient(to bottom, #eabc00 0, #eabc00 100%) ;
   min-height: 100px;
 }
 
-.btn-group, .float-right {
-  float: right;
+.navbar-brand, .navbar-logo {
+  height: 100px;
 }
 
 .drop_button_height {
   padding: 39px 12px;
 }
 
-.btn-buybeer {
-  height: 200px;
-  width: 400px;
-  border-radius: 10%;
-  position: relative;
-}
-
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.form_num_beers {
-  width: 25%;
-}
-
-.navbar-brand, .navbar-logo {
-  height: 100px;
+.container2 {
+  margin-top: 100px;
 }
 
 .background {
@@ -39,7 +23,7 @@
     background:url('../img/background_texture.jpg');
 }
 
-.colour_overlay {
+.background_colour_overlay {
     background-color: rgba(34, 34, 34, 0.85);
     top: 0;
     left: 0;
@@ -47,11 +31,21 @@
     height: 100%;
 }
 
+
+/* User */
+.btn-buybeer {
+  height: 200px;
+  width: 100%;
+  border-radius: 10%;
+  position: relative;
+}
+
+.form_input_num_beers {
+  width: 75%;
+}
+
 .num_beers {
   width: 25%;
   background-color: gray;
 }
 
-.container2{
-  margin-top: 100px;
-}
