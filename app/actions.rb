@@ -26,7 +26,7 @@ end
 get '/user/:id' do
 ## MUST create login form before uncommenting
   if logged_in?
-    @user = User.find session[:user_id]
+    @user = current_user
     erb :'/user/index'
   else
     redirect '/'
@@ -37,7 +37,7 @@ post '/user/buy_beer' do
   # Stripe code goes here
   if params[:num_beers].to_i > 0
     Transaction.create(user_id: current_user.id, num_purchased: params[:num_beers])
-    user = User.find(session[:user_id])
+    user = current_user
     user.beer_count += params[:num_beers].to_i
     user.save
   end
@@ -57,7 +57,7 @@ post '/' do
   user = User.find_by_email(params[:email])
   if user && (user.password == params[:password])
     session[:user_id] = user.id
-    redirect "/user/#{user.id}"
+    redirect "/user/#{current_user.id}"
   else
     redirect '/'
   end
@@ -71,7 +71,7 @@ post '/user' do
   )
   if user.save
     session[:user_id] = user.id
-    redirect "/user/#{user.id}"
+    redirect "/user/#{current_user.id}"
   else
     redirect '/'
   end
