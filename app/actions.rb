@@ -21,7 +21,7 @@ end
 get '/user/:id' do
 ## MUST create login form before uncommenting
   if logged_in?
-    # @user = User.find session[:user_id]
+    @user = User.find session[:user_id]
     erb :'/user/index'
   else
     redirect '/'
@@ -37,8 +37,8 @@ get '/user/new' do
 end
 
 post '/' do
-  user = User.find_by(email: params[:email])
-  if user && user.password == params[:password]
+  user = User.find_by_email(params[:email])
+  if user && (user.password == params[:password])
     session[:user_id] = user.id
     redirect '/user/:id'
   else
