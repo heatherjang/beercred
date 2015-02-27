@@ -1,6 +1,6 @@
 # beercred actions
 
-# helpers do
+helpers do
 #   # Returns the logged in user
 #   # Re`turns nil if the user is not logged in
 #   def current_user
@@ -8,7 +8,11 @@
 #       User.find(session[:user_id])
 #     end
 #   end
-# end
+
+  def logged_in?
+    session[:user_id]
+  end
+end
 
 get '/' do
   erb :index
@@ -16,8 +20,12 @@ end
 
 get '/user/:id' do
 ## MUST SET session[:user_id] before uncommenting
-  # @user = User.find session[:user_id]
-  erb :'/user'
+  if logged_in?
+    # @user = User.find session[:user_id]
+    erb :'/user/index'
+  else
+    redirect '/'
+  end
 end
 
 get '/admin' do
