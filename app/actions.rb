@@ -53,7 +53,7 @@ post '/user' do
     username: params[:username]
   )
   if @user.save
-    session[:user_id] = user.id
+    session[:user_id] = @user.id
     redirect '/user/:id'
   else
     redirect '/'
