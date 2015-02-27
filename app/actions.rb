@@ -29,6 +29,8 @@ get '/user/:id' do
 end
 
 post '/user/buy_beer' do
+  # Stripe code goes here
+
   @user = User.find(session[:user_id])
   @user.beer_count += params[:num_beers].to_i
   @user.save
@@ -48,21 +50,21 @@ post '/' do
   user = User.find_by_email(params[:email])
   if user && (user.password == params[:password])
     session[:user_id] = user.id
-    redirect '/user/:id'
+    redirect "/user/#{user.id}"
   else
     redirect '/'
   end
 end
 
 post '/user' do 
-  @user = User.new(
+  user = User.new(
     email: params[:email],
     password: params[:password],
     username: params[:username]
   )
-  if @user.save
-    session[:user_id] = @user.id
-    redirect '/user/:id'
+  if user.save
+    session[:user_id] = user.id
+    redirect "/user/#{user.id}"
   else
     redirect '/'
   end
