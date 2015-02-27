@@ -29,6 +29,7 @@ get '/user/:id' do
 end
 
 get '/admin' do
+  @users = User.all
   erb :'/admin/index'
 end
 

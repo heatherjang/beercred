@@ -6,8 +6,7 @@
     <div class="col-md-3">
       <div class="stats_box">
         <h2 class="stats_title">Number of beers purchased (since time?)</h2>
-        <!-- #erb#: beer_count total -->
-        <h3 class="stats_value">#erb#</h3>
+        <h3 class="stats_value"><%= @users.sum(:beer_count) %></h3>
       </div>
     </div>
     <div class="col-md-2">
@@ -16,8 +15,7 @@
     <div class="col-md-3">
       <div class="stats_box">
         <h2 class="stats_title">Total revenue (since time?)</h2>
-        <!-- #erb#: beer_count total * beer cost -->
-        <h3 class="stats_value">#erb#</h3>
+        <h3 class="stats_value"><%= @users.sum(:beer_count) * 2.50 %></h3>
       </div>
     </div>
     <div class="col-md-2">
