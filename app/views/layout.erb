@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--Bootstrap CSS starts here -->
+  <!--Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <!--End Bootstrap CSS -->
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/stylesheets/application.css">
+  <!-- Custom js -->
   <script src="/javascript/application.js"></script>
 
   <title>BeerCred</title>
 </head>
+
 <body>
-<!-- Basic navbar & logo -->
-    <nav class="navbar navbar-inverse navbar-yellow navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Project name</a>
+<!-- Nav bar -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-inverse navbar-yellow navbar-fixed-top">
+        <div class="col-md-1">
         </div>
-        <!-- Dropdown menu button -->
-        <div class="btn-group float-right">
-          <button type="button" class="btn btn-default drop_button_height">Action</button>
-          <button type="button" class="btn btn-default dropdown-toggle drop_button_height" data-toggle="dropdown" aria-expanded="true">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Settings</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
+        <!-- Nav bar logo -->
+        <div class="col-md-2">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Logo goes here</a>
+          </div>
         </div>
+        <div class="col-md-6">
+        </div>
+        <!-- Nav bar drop down -->
+        <div class="col-md-2">
+          <div class="btn-group float_right">
+          <!-- #erb# username on button-->
+            <button type="button" class="btn btn-default drop_button_height">#erb# username</button>
+            <button type="button" class="btn btn-default dropdown-toggle drop_button_height" data-toggle="dropdown" aria-expanded="true">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </nav>
+    </div>
+  </div>
+
+<!-- Background colour and texture -->
+  <div class="background ">
+    <div class="background_colour_overlay">
+      <div class="container container2">
+
+        <%= yield %>
+
       </div>
-    </nav>
-    <!-- Backround texture and colour -->
-    <div class="background ">
-    <div class="colour_overlay">
-     <div class="container container2">
-      <%= yield %>
-       </div>
-     </div>
-   </div>
-<!-- End background texture and colour -->
+    </div>
+  </div>
+
+
 </body>
 </html>
