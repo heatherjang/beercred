@@ -13,8 +13,8 @@ helpers do
     session[:user_id]
   end
   
-  def current_user_id
-    session[:user_id]
+  def current_user
+    User.find(session[:user_id])
   end
 
 end
@@ -35,11 +35,13 @@ end
 
 post '/user/buy_beer' do
   # Stripe code goes here
-  Transaction.create(user_id: current_user_id, num_purchased: params[:num_beers])
-  user = User.find(session[:user_id])
-  user.beer_count += params[:num_beers].to_i
-  user.save
-  redirect 'user/:id'
+  if params[:num_beers].to_i > 0
+    Transaction.create(user_id: current_user.id, num_purchased: params[:num_beers])
+    user = User.find(session[:user_id])
+    user.beer_count += params[:num_beers].to_i
+    user.save
+  end
+  redirect "user/#{current_user.id}"
 end
 
 get '/admin' do
