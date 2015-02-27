@@ -12,6 +12,11 @@ helpers do
   def logged_in?
     session[:user_id]
   end
+  
+  def current_user_id
+    session[:user_id]
+  end
+
 end
 
 get '/' do
@@ -30,10 +35,10 @@ end
 
 post '/user/buy_beer' do
   # Stripe code goes here
-
-  @user = User.find(session[:user_id])
-  @user.beer_count += params[:num_beers].to_i
-  @user.save
+  Transaction.create(user_id: current_user_id, num_purchased: params[:num_beers])
+  user = User.find(session[:user_id])
+  user.beer_count += params[:num_beers].to_i
+  user.save
   redirect 'user/:id'
 end
 
