@@ -1,3 +1,34 @@
+/* General styling */
+.stats_box {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  border-radius: 10px;
+
+}
+
+.stats_title {
+  font-family: Helvetica;
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.stats_value {
+  font-family: Helvetica;
+  font-size: 3em;
+  font-weight: 900;
+
+}
+
+.position_fixed {
+  position: static;
+}
+
+.float_right {
+  float: right;
+}
+
+
 /* Layout */
 .navbar-inverse .navbar-collapse, .navbar-yellow {
   background-color: #eabc00;
@@ -29,33 +60,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-/* General styling */
-.stats_box {
-  height: 100%;
-  width: 100%;
-  background-color: gray;
-  border-radius: 10px;
-
-}
-
-.stats_title {
-  font-family: Helvetica;
-  font-size: 1.75em;
-  font-weight: 500;
-}
-
-.stats_value {
-  font-family: Helvetica;
-  font-size: 3em;
-  font-weight: 900;
-
-}
-
-.position_fixed {
-  position: static;
 }
 
 

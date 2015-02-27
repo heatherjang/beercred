@@ -31,8 +31,7 @@
     </div>
   <!-- Displays inventory status & total inventory -->
     <div class="col-md-4">
-    <!-- #erb# code here -->
-      <!-- if inventory okay: -->
+    <!-- #erb# if inventory okay: -->
       <div class="inventory okay">
         <h2 class="inventory_title">Your inventory is okay </h2>
         <h3 class="inventory_title"> Beers remaining: </h3>
@@ -44,19 +43,33 @@
         <h3 class="inventory_title"> Beers remaining: </h3>
         <h4 class="inventory_value">custom erb display remaining inventory</h4>
       </div>
-      <!-- end -->
+      <!-- #erb# end -->
     </div>
     <div class="col-md-4">
     </div>
   </div>
 </div>
 
-<!-- Display table: consumer name, # beers bought, $spent -->
+<!-- User stats table: Consumer name, # beers bought, $spent -->
 <div class="container">
   <div class="row">
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
+      <table class="table table-striped table-hover">
+        <tr>
+          <th>User</th>
+          <th>Beers bought</th>
+          <th>$$ spent</th>
+        </tr>
+        <!-- #erb# for each user do-->
+        <tr>
+          <td>username/email/id?</td>
+          <td># beers purchased</td> 
+          <td>total $$ spent</td>
+        </tr>
+        <!-- #erb# end -->
+      </table>
     </div>
     <div class="col-md-2">
     </div>
