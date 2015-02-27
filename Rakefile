@@ -30,8 +30,15 @@ end
 desc "populate db"
 task "db:populate" do
   puts "Populating Database"
-  User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "123456789")
-  User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "123456789")
+  User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Rick_Grimes@zombies.com", username: "Rick Grimes", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Glen@zombies.com", username: "Glenn Rhee", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Crossbowman@zombie.com", username: "Daryl Dixon", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Maggie@zombies.com", username: "Maggie Greene", password: "test", credit_card: "4242424242424242")
+  User.create(email: "Gov@woodbury.com", username: "The Governor", password: "test", credit_card: "4242424242424242")
+  User.create(email: "redshirt@zombie.com", username: "Tyreese", password: "test", credit_card: "4242424242424242")
+  User.create(email: "never_used@email.com", username: "Eugene Porter", password: "test", credit_card: "4242424242424242")
 
   Admin.create(email: "God@fridge.beer", username: "God", password: "test")
 end
