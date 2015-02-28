@@ -36,7 +36,7 @@
 
 /* Navbars */
 .navbar_transparent {
-  background-color: transparent;
+  background-color: black;
   border-color: :transparent;
 
 }
@@ -96,6 +96,15 @@
 
 /* Drop button when active */
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default{
+  background-color: #f0bb3b;
+  border: 2px solid #604a17;
+}
+
+.login_position {
+  padding-top: 35px;
+}
+
+.btn_background {
   background-color: #f0bb3b;
   border: 2px solid #604a17;
 }
