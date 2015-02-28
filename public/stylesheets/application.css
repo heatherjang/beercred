@@ -140,6 +140,11 @@
 
 
 /* Index */
+.thirsty {
+  font-size: 50px;
+  color: #f0bb3b;
+}
+
 .call_to_action {
   color: white;
 }
