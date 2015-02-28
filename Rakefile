@@ -51,6 +51,9 @@ task "db:populate" do
   user7 = User.create(email: "Gov@woodbury.com", username: "The Governor", password: "test", credit_card: "4242424242424242", beer_count: 9)
   user8 = User.create(email: "redshirt@zombie.com", username: "Tyreese", password: "test", credit_card: "4242424242424242", beer_count: 2)
   user9 = User.create(email: "never_used@email.com", username: "Eugene Porter", password: "test", credit_card: "4242424242424242")
+  User.create(email: "a@b.com", username: "ab", password: "test", credit_card: "4242424242424242")
+  User.create(email: "c@d.com", username: "cd", password: "test", credit_card: "4242424242424242")
+  User.create(email: "e@f.com", username: "ef", password: "test", credit_card: "4242424242424242")
 
   Transaction.create(user_id: user1.id, num_purchased: user1.beer_count)
   Transaction.create(user_id: user2.id, num_purchased: user2.beer_count)
