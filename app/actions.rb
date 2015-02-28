@@ -21,6 +21,10 @@ helpers do
     User.all.order("beer_count DESC").limit(5)
   end
 
+  def all_users_by_beer_count
+    User.all.order("beer_count DESC")
+  end
+
   def current_admin 
     Admin.first
   end
