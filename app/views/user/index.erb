@@ -5,28 +5,58 @@
   <!-- Buy beer button & form -->
     <div class="col-md-4">
       <form method="POST" action="/user/buy_beer">
-        <button type="submit" class="btn btn-primary btn-buybeer">
-          Buy beer!
-        </button>
-          <input type="number" name="num_beers"class="form-control form_input_num_beers" placeholder="Enter # of beers">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_Zp4xSsxUyGGq98so2JnstSnY"
+          data-image="/img/background_texture.jpg"
+          data-name="BeerCred"
+          data-description="we love you"
+          data-currency="cad"
+          data-email=<%= current_user.email %>
+          data-amount=<%= @current_beers? @current_beers * 250 : 0 %>>
+        </script>
+        <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers">
       </form>
     </div>
     <div class="col-md-4">
     </div>
   </div>
 </div>
-
+  
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="stats_box">
-        <h2 class="stats_title">BEER COUNT</h2>
+        <h2 class="stats_title">Your BeerCred</h2>
         <h3 class="stats_value"><%= @user.beer_count %></h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="stats_box">
+      <div class="col-md-6">
+        <table class="table">
+        <h2>BeerCred Leaderboard</h2>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>BeerCreds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% top_five_users_on_leaderboard.each do |user| %>
+              <tr>
+                <td><%= user.username %></td>
+                <td><%= user.beer_count %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+<!--  -->

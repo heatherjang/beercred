@@ -17,7 +17,11 @@ helpers do
     User.find(session[:user_id])
   end
 
-  def current_admin
+  def top_five_users_on_leaderboard
+    User.all.order("beer_count DESC").limit(5)
+  end
+
+  def current_admin 
     Admin.first
   end
 
@@ -29,6 +33,7 @@ end
 
 get '/user/:id' do
 ## MUST create login form before uncommenting
+  @users = User.all
   if logged_in?
     @user = current_user
     erb :'/user/index'
@@ -38,7 +43,6 @@ get '/user/:id' do
 end
 
 post '/user/buy_beer' do
-  # Stripe code goes here
   if (params[:num_beers].to_i > 0) && (params[:num_beers].to_i <= current_admin.inventory)
     Transaction.create(user_id: current_user.id, num_purchased: params[:num_beers])
     admin = current_admin
@@ -46,6 +50,7 @@ post '/user/buy_beer' do
     admin.save
     user = current_user
     user.beer_count += params[:num_beers].to_i
+    @current_beers = params[:num_beers].to_i
     user.save
   end
   redirect "user/#{current_user.id}"
