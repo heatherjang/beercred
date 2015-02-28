@@ -1,25 +1,9 @@
 /* General styling */
 
 /* #f0bb3b */
-
-@font-face {
-  font-family: Lighthouse; 
-  src: url('../fonts/Lighthouse.ttf');
-}
-
-@font-face {
-  font-family: Citybirds; 
-  src: url('../fonts/city_birds.ttf');
-}
-
 @font-face {
   font-family: Intrique; 
   src: url('../fonts/Intrique.ttf');
-}
-
-@font-face {
-  font-family: Mademoiselle; 
-  src: url('../fonts/MademoiselleK.ttf');
 }
 
 .stats_box {
@@ -39,7 +23,6 @@
   font-family: Helvetica;
   font-size: 3em;
   font-weight: 900;
-
 }
 
 .position_fixed {
@@ -50,20 +33,56 @@
   float: right;
 }
 
-/* Navbars */
-.logo_beercred_color {
-  font-family: Intrique;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #f0bb3b;
-  font-size: 70px;
-  font-weight 900;
-  color: #f0bb3b;
-}
 
+/* Navbars */
 .logo_box {
   margin-top: -5px;
   padding-bottom: 10px;
 }
+
+.logo_link {
+  font-family: Intrique;
+  font-size: 70px;
+  font-weight 900;
+  color: #f0bb3b;
+  transition: 0.2s
+}
+
+.logo_link:visited {
+  color: #f0bb3b;
+}
+
+.logo_link:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.logo_link:active {
+  color: #f0bb3b;
+}
+
+.drop_button_height {
+  padding: 20px 12px;
+}
+
+.btn_transparent {
+    background-color: transparent;
+    border: 5px solid blue;
+    color: white;
+    font-size: 18px;
+}
+/*
+.btn-group-vertical>.btn.active, .btn-group-vertical>.btn:active, .btn-group-vertical>.btn:focus, .btn-group-vertical>.btn:hover, .btn-group>.btn.active, .btn-group>.btn:active, .btn-group>.btn:focus, .btn-group>.btn:hover {
+  background: white;
+  border-color: blue;
+}
+*/
+
+.btn-group-vertical>.btn:hover, .btn-group>.btn:hover {
+  background: white;
+  border-color: blue;
+}
+
 
 
 /* Layout */
@@ -75,10 +94,6 @@
 
 .navbar-brand, .navbar-logo {
   height: 100px;
-}
-
-.drop_button_height {
-  padding: 20px 12px;
 }
 
 .container2 {
