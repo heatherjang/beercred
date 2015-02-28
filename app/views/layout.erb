@@ -72,20 +72,16 @@
   </div>
 
 <!-- Background colour and texture -->
-  <div class="background ">
-    <div class="background_colour_overlay">
-      <div class="container container2">
+  <!-- <div class="background"> -->
+    <div class="background_img">
+        <div class="background_colour_overlay">
+           <div class="container container2">
 
-        <%= yield %>
+            <%= yield %>
 
-     </div>
+          </div>
+        </div>
     </div>
-  </div>
-
-  <%= session.inspect %>
-  <%= Transaction.last.num_purchased %>
-  <%= Transaction.last.created_at %>
-  <%= current_admin.inventory %>
-
+  <!-- </div> -->
 </body>
 </html>

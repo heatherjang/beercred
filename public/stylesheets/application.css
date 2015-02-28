@@ -124,18 +124,24 @@
   padding-top: 100px;
 }
 
-.background {
-    max-width: 100%;
-    height: 100%;
-    background:url('../img/background_texture.jpg');
+.background_img {
+  background-image:url('../img/brew_sign.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  height: 100vh;
+  /*background:url('../img/single_beer.jpg');*/
+
 }
+/*
+.background_img {
+  background:url('../img/single_beer.jpg');
+}*/
 
 .background_colour_overlay {
-    background-color: rgba(34, 34, 34, 0.85);
-    top: 0;
-    left: 0;
-    width: 100%;
+    background-color: rgba(34, 34, 34, 0.5);
     height: 100%;
+    width: 100%;
 }
 
 
