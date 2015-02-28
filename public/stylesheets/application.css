@@ -1,4 +1,27 @@
 /* General styling */
+
+/* #f0bb3b */
+
+@font-face {
+  font-family: Lighthouse; 
+  src: url('../fonts/Lighthouse.ttf');
+}
+
+@font-face {
+  font-family: Citybirds; 
+  src: url('../fonts/city_birds.ttf');
+}
+
+@font-face {
+  font-family: Intrique; 
+  src: url('../fonts/Intrique.ttf');
+}
+
+@font-face {
+  font-family: Mademoiselle; 
+  src: url('../fonts/MademoiselleK.ttf');
+}
+
 .stats_box {
   height: 100%;
   width: 100%;
@@ -25,6 +48,21 @@
 
 .float_right {
   float: right;
+}
+
+/* Navbars */
+.logo_beercred_color {
+  font-family: Intrique;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f0bb3b;
+  font-size: 70px;
+  font-weight 900;
+  color: #f0bb3b;
+}
+
+.logo_box {
+  margin-top: -5px;
+  padding-bottom: 10px;
 }
 
 
