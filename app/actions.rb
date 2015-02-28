@@ -17,6 +17,11 @@ helpers do
     User.find(session[:user_id])
   end
 
+  def users_on_leaderboard
+    User.all.order("beer_count DESC")
+
+  end
+
 end
 
 get '/' do
@@ -25,6 +30,7 @@ end
 
 get '/user/:id' do
 ## MUST create login form before uncommenting
+  @users = User.all
   if logged_in?
     @user = current_user
     erb :'/user/index'
