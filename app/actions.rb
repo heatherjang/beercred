@@ -19,7 +19,10 @@ helpers do
 
   def users_on_leaderboard
     User.all.order("beer_count DESC")
-
+  end
+  
+  def current_admin
+    Admin.first
   end
 
 end
@@ -73,7 +76,8 @@ post '/user' do
   user = User.new(
     email: params[:email],
     password: params[:password],
-    username: params[:username]
+    username: params[:username],
+    admin_id: current_admin.id
   )
   if user.save
     session[:user_id] = user.id
