@@ -184,7 +184,21 @@
 }
 
 
+/* Steve's code */
+.leaderboard {
+   background-color: #FDFDFD;
+}
 
+.leader_center {
+  
+}
+
+.leader_title {
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  background-color: #FDFDFD;
+}
 
 
 
