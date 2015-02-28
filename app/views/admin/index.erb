@@ -29,19 +29,24 @@
     </div>
   <!-- Displays inventory status & total inventory -->
     <div class="col-md-4">
-    <!-- #erb# if inventory okay: -->
-      <div class="inventory okay">
-        <h2 class="inventory_title">Your inventory is okay </h2>
-        <h3 class="inventory_title"> Beers remaining: </h3>
-        <h4 class="inventory_value">#erb#</h4>
-      </div>
-      <!-- else inventory low: -->
-      <div class="inventory low">
-        <h2 class="inventory_title">Restock!</h2>
-        <h3 class="inventory_title"> Beers remaining: </h3>
-        <h4 class="inventory_value">#erb#</h4>
-      </div>
-      <!-- #erb# end -->
+      <% if current_admin.inventory >= 12 %>
+      
+      <!-- #erb# if inventory okay: -->
+        <div class="inventory okay">
+          <h2 class="inventory_title">Your inventory is okay </h2>
+          <h3 class="inventory_title"> Beers remaining: </h3>
+          <h4 class="inventory_value"><%= current_admin.inventory %></h4>
+        </div>
+      
+      <% else %>
+        <!-- else inventory low: -->
+        <div class="inventory low">
+          <h2 class="inventory_title">Restock!</h2>
+          <h3 class="inventory_title"> Beers remaining: </h3>
+          <h4 class="inventory_value"><%= current_admin.inventory %></h4>
+        </div>
+      <% end %>
+        <!-- #erb# end -->
     </div>
     <div class="col-md-4">
     </div>
