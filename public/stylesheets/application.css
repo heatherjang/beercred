@@ -35,6 +35,12 @@
 
 
 /* Navbars */
+.navbar_transparent {
+  background-color: transparent;
+  border-color: :transparent;
+
+}
+
 .logo_box {
   margin-top: -5px;
   padding-bottom: 10px;
@@ -83,6 +89,7 @@
   color: white;
 }
 
+/* Drop button menu when hovered over line */
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
   background-color: #f6d689;
 }
