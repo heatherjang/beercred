@@ -87,14 +87,14 @@ task "db:populate" do
   Transaction.create(user_id: user7.id, num_purchased: user7.beer_count)
   Transaction.create(user_id: user8.id, num_purchased: user8.beer_count)
   Transaction.create(user_id: user9.id, num_purchased: user9.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user10.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user11.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user12.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user13.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user14.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user15.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user16.beer_count)
-  Transaction.create(user_id: user9.id, num_purchased: user17.beer_count)
+  Transaction.create(user_id: user10.id, num_purchased: user10.beer_count)
+  Transaction.create(user_id: user11.id, num_purchased: user11.beer_count)
+  Transaction.create(user_id: user12.id, num_purchased: user12.beer_count)
+  Transaction.create(user_id: user13.id, num_purchased: user13.beer_count)
+  Transaction.create(user_id: user14.id, num_purchased: user14.beer_count)
+  Transaction.create(user_id: user15.id, num_purchased: user15.beer_count)
+  Transaction.create(user_id: user16.id, num_purchased: user16.beer_count)
+  Transaction.create(user_id: user17.id, num_purchased: user17.beer_count)
 
 end
 
