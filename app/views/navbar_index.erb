@@ -14,14 +14,14 @@
   <!-- Nav bar drop down -->
   <div class="col-md-2">
   <% if logged_in? %>
-    <div class="btn-group float_right">
+    <div class="btn-group float_right drop_button_position">
     <!-- #erb# username on button-->
       <button type="button" class="btn btn-default btn_transparent">#erb# username</button>
       <button type="button" class="btn btn-default dropdown-toggle btn_transparent" data-toggle="dropdown" aria-expanded="true">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
       </button>
-        <ul class="dropdown-menu" role="menu">
+        <ul class="dropdown-menu drop_down_background" role="menu">
           <li><a href="#">Account</a></li>
           <li><a href="#">Settings</a></li>
           <li class="divider"></li>

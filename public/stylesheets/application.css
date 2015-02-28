@@ -61,28 +61,37 @@
   color: #f0bb3b;
 }
 
-.drop_button_height {
-  padding: 20px 12px;
+.drop_button_position {
+  padding-top: 30px;
 }
 
 .btn_transparent {
     background-color: transparent;
-    border: 5px solid blue;
+    border: 2px solid #604a17;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
 }
-/*
-.btn-group-vertical>.btn.active, .btn-group-vertical>.btn:active, .btn-group-vertical>.btn:focus, .btn-group-vertical>.btn:hover, .btn-group>.btn.active, .btn-group>.btn:active, .btn-group>.btn:focus, .btn-group>.btn:hover {
-  background: white;
-  border-color: blue;
-}
-*/
 
 .btn-group-vertical>.btn:hover, .btn-group>.btn:hover {
-  background: white;
-  border-color: blue;
+  background-color: #f0bb3b;
+  border: 2px solid #604a17;
+  color: black;
 }
 
+.dropdown-menu, .dropdown_background {
+  background-color: #f0bb3b;
+  color: white;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: #f6d689;
+}
+
+/* Drop button when active */
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default{
+  background-color: #f0bb3b;
+  border: 2px solid #604a17;
+}
 
 
 /* Layout */
