@@ -17,6 +17,10 @@ helpers do
     User.find(session[:user_id])
   end
 
+  def current_admin
+    Admin.first
+  end
+
 end
 
 get '/' do
@@ -67,7 +71,8 @@ post '/user' do
   user = User.new(
     email: params[:email],
     password: params[:password],
-    username: params[:username]
+    username: params[:username],
+    admin_id: current_admin.id
   )
   if user.save
     session[:user_id] = user.id

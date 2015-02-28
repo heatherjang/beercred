@@ -42,18 +42,20 @@ end
 desc "populate db"
 task "db:populate" do
   puts "Populating Database"
-  user1 = User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "4242424242424242", beer_count: 5)
-  user2 = User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "4242424242424242", beer_count: 3)
-  user3 = User.create(email: "Rick_Grimes@zombies.com", username: "Rick Grimes", password: "test", credit_card: "4242424242424242", beer_count: 7)
-  user4 = User.create(email: "Glen@zombies.com", username: "Glenn Rhee", password: "test", credit_card: "4242424242424242", beer_count: 9)
-  user5 = User.create(email: "Crossbowman@zombie.com", username: "Daryl Dixon", password: "test", credit_card: "4242424242424242", beer_count: 4)
-  user6 = User.create(email: "Maggie@zombies.com", username: "Maggie Greene", password: "test", credit_card: "4242424242424242", beer_count: 12)
-  user7 = User.create(email: "Gov@woodbury.com", username: "The Governor", password: "test", credit_card: "4242424242424242", beer_count: 9)
-  user8 = User.create(email: "redshirt@zombie.com", username: "Tyreese", password: "test", credit_card: "4242424242424242", beer_count: 2)
-  user9 = User.create(email: "never_used@email.com", username: "Eugene Porter", password: "test", credit_card: "4242424242424242")
-  User.create(email: "a@b.com", username: "ab", password: "test", credit_card: "4242424242424242")
-  User.create(email: "c@d.com", username: "cd", password: "test", credit_card: "4242424242424242")
-  User.create(email: "e@f.com", username: "ef", password: "test", credit_card: "4242424242424242")
+  admin1 = Admin.create(email: "God@fridge.beer", username: "God", password: "test")
+
+  user1 = User.create(email: "President@whitehouse.gov", username: "Bill Clinton", password: "test", credit_card: "4242424242424242", beer_count: 5, admin_id: admin1.id)
+  user2 = User.create(email: "Prime_minister@canada.com", username: "Stephen Harper", password: "test", credit_card: "4242424242424242", beer_count: 3, admin_id: admin1.id)
+  user3 = User.create(email: "Rick_Grimes@zombies.com", username: "Rick Grimes", password: "test", credit_card: "4242424242424242", beer_count: 7, admin_id: admin1.id)
+  user4 = User.create(email: "Glen@zombies.com", username: "Glenn Rhee", password: "test", credit_card: "4242424242424242", beer_count: 9, admin_id: admin1.id)
+  user5 = User.create(email: "Crossbowman@zombie.com", username: "Daryl Dixon", password: "test", credit_card: "4242424242424242", beer_count: 4, admin_id: admin1.id)
+  user6 = User.create(email: "Maggie@zombies.com", username: "Maggie Greene", password: "test", credit_card: "4242424242424242", beer_count: 12, admin_id: admin1.id)
+  user7 = User.create(email: "Gov@woodbury.com", username: "The Governor", password: "test", credit_card: "4242424242424242", beer_count: 9, admin_id: admin1.id)
+  user8 = User.create(email: "redshirt@zombie.com", username: "Tyreese", password: "test", credit_card: "4242424242424242", beer_count: 2, admin_id: admin1.id)
+  user9 = User.create(email: "never_used@email.com", username: "Eugene Porter", password: "test", credit_card: "4242424242424242", admin_id: admin1.id)
+  User.create(email: "a@b.com", username: "ab", password: "test", credit_card: "4242424242424242", admin_id: admin1.id)
+  User.create(email: "c@d.com", username: "cd", password: "test", credit_card: "4242424242424242", admin_id: admin1.id)
+  User.create(email: "e@f.com", username: "ef", password: "test", credit_card: "4242424242424242", admin_id: admin1.id)
 
   Transaction.create(user_id: user1.id, num_purchased: user1.beer_count)
   Transaction.create(user_id: user2.id, num_purchased: user2.beer_count)
@@ -65,7 +67,7 @@ task "db:populate" do
   Transaction.create(user_id: user8.id, num_purchased: user8.beer_count)
   Transaction.create(user_id: user9.id, num_purchased: user9.beer_count)
 
-  Admin.create(email: "God@fridge.beer", username: "God", password: "test")
+
 end
 
 desc "view db"
@@ -74,7 +76,7 @@ task "db:view" do
   users = User.all
   if users.size > 0
     users.each do |user|
-      puts "Name #{user.username}, E-mail #{user.email}, Password: #{user.password}, Credit Card: #{user.credit_card}"
+      puts "Name #{user.username}, E-mail #{user.email}, Password: #{user.password}, Credit Card: #{user.credit_card}, Belongs to: #{user.admin.username}"
     end
   else
     puts "No Useres in database"
