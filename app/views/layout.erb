@@ -1,85 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <head>
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/stylesheets/application.css">
-  <!-- Custom js -->
-  <script src="/javascript/application.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/application.css">
+    <!-- Custom js -->
+    <script src="/javascript/application.js"></script>
 
-  <title>BeerCred</title>
-</head>
+    <title>BeerCred</title>
+  </head>
 
-<body>
-<!-- Nav bar -->
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar_transparent">
-          <div class="col-md-1">
-          </div>
-          <!-- Nav bar logo -->
-          <div class="col-md-2">
-            <div class="navbar-header">
-              <div class="logo_box">
-                <a class="logo_link beer_cred_color"href="/">BeerCred</a>
-              </div>
+  <body>
+  <!-- Nav bar -->
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="navbar navbar-inverse navbar-fixed-top navbar_transparent">
+            <div class="col-md-1">
             </div>
-          </div>
-          <% if logged_in? %>
-            <div class="col-md-6">
-            </div>
-            <!-- Nav bar drop down -->
+            <!-- Nav bar logo -->
             <div class="col-md-2">
-              <div class="btn-group float_right drop_button_position">
-              <!-- #erb# username on button-->
-                <button type="button" class="btn btn-default btn_transparent">#erb# username</button>
-                <button type="button" class="btn btn-default dropdown-toggle btn_transparent" data-toggle="dropdown" aria-expanded="true">
-                  <span class="caret"></span>
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                  <ul class="dropdown-menu drop_down_background" role="menu">
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Logout</a></li>
-                  </ul>
+              <div class="navbar-header">
+                <div class="logo_box">
+                  <a class="logo_link beer_cred_color"href="/">BeerCred</a>
+                </div>
               </div>
-          <!-- If not logged in -->
-          <% else %>
-            <div class="col-md-4">
             </div>
-            <div class="col-md-4 login_position">
-              <form method="POST" action="/" class="form-inline">
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="LoginEmail" placeholder="Enter email">
+            <% if logged_in? %>
+              <div class="col-md-6">
+              </div>
+              <!-- Nav bar drop down -->
+              <div class="col-md-2">
+                <div class="btn-group float_right drop_button_position">
+                <!-- #erb# username on button-->
+                  <button type="button" class="btn btn-default btn_transparent">#erb# username</button>
+                  <button type="button" class="btn btn-default dropdown-toggle btn_transparent" data-toggle="dropdown" aria-expanded="true">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                    <ul class="dropdown-menu drop_down_background" role="menu">
+                      <li><a href="#">Account</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Logout</a></li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" name="password" id="LoginPassword" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-default btn_background">Login</button>
-              </form>
+            <!-- If not logged in -->
+            <% else %>
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4 login_position">
+                <form method="POST" action="/" class="form-inline">
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="LoginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" name="password" id="LoginPassword" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-default btn_background">Login</button>
+                </form>
+              </div>
+            <% end %>
             </div>
-          <% end %>
-          </div>
-          <div class="col-md-1">
-          </div>
-        </nav>
+            <div class="col-md-1">
+            </div>
+          </nav>
+      </div>
     </div>
-  </div>
 
-<!-- Background colour and texture -->
-    <div class="background_img">
-        <div class="background_colour_overlay">
-           <div class="container container2">
+  <!-- Background colour and texture -->
+    <div class="background ">
+      <div class="background_colour_overlay">
+        <div class="container2">
 
-            <%= yield %>
+          <%= yield %>
 
-          </div>
-        </div>
+       </div>
+      </div>
     </div>
-</body>
+
+  </body>
+
 </html>
