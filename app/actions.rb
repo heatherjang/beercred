@@ -2,7 +2,7 @@
 
 helpers do
 #   # Returns the logged in user
-#   # Re`turns nil if the user is not logged in
+#   # Returns nil if the user is not logged in
 #   def current_user
 #     if session[:user_id]
 #       User.find(session[:user_id])
@@ -37,6 +37,14 @@ get '/user/:id' do
   if logged_in?
     @user = current_user
     erb :'/user/index'
+  else
+    redirect '/'
+  end
+end
+
+get '/user/?' do
+  if logged_in?
+    redirect :"/user/#{current_user.id}"
   else
     redirect '/'
   end
