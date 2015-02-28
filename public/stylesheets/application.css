@@ -9,8 +9,11 @@
 .stats_box {
   height: 100%;
   width: 100%;
-  background-color: gray;
+  background: rgba(34, 34, 34, .4);
   border-radius: 10px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+  border: solid #f0bb3b 8px;
 }
 
 .stats_title {
@@ -24,6 +27,11 @@
   font-size: 3em;
   font-weight: 900;
 }
+
+.stats_box_admin_size {
+  width: 100%;
+  height: 50px;
+  }
 
 .position_fixed {
   position: static;
