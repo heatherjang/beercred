@@ -36,7 +36,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @users.order(beer_count: :desc ).limit(5).each do |user| %>
+          <% top_five_users_on_leaderboard.each do |user| %>
             <tr>
               <td><%= user.username %></td>
               <td><%= user.beer_count %></td>

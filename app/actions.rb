@@ -17,8 +17,8 @@ helpers do
     User.find(session[:user_id])
   end
 
-  def users_on_leaderboard
-    User.all.order("beer_count DESC")
+  def top_five_users_on_leaderboard
+    User.all.order("beer_count DESC").limit(5)
   end
 
   def current_admin 
