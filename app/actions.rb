@@ -20,8 +20,8 @@ helpers do
   def users_on_leaderboard
     User.all.order("beer_count DESC")
   end
-  
-  def current_admin
+
+  def current_admin 
     Admin.first
   end
 
