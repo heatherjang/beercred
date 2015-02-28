@@ -43,11 +43,11 @@ get '/user/:id' do
 end
 
 post '/user/buy_beer' do
-  # Stripe code goes here
   if params[:num_beers].to_i > 0
     Transaction.create(user_id: current_user.id, num_purchased: params[:num_beers])
     user = current_user
     user.beer_count += params[:num_beers].to_i
+    @current_beers = params[:num_beers].to_i
     user.save
   end
   redirect "user/#{current_user.id}"

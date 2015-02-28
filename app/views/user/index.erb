@@ -12,9 +12,10 @@
           data-name="BeerCred"
           data-description="we love you"
           data-currency="cad"
-          data-amount="250">
+          data-email=<%= current_user.email %>
+          data-amount=<%= @current_beers? @current_beers * 250 : 0 %>>
         </script>
-        <input type="number" name="num_beers"class="form-control form_input_num_beers" placeholder="Enter # of beers">
+        <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers">
       </form>
     </div>
     <div class="col-md-4">
