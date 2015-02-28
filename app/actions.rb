@@ -44,7 +44,12 @@ end
 
 post '/user/buy_beer' do
   if params[:num_beers].to_i > 0
+  # Stripe code goes here
+  if (params[:num_beers].to_i > 0) && (params[:num_beers].to_i <= current_admin.inventory)
     Transaction.create(user_id: current_user.id, num_purchased: params[:num_beers])
+    admin = current_admin
+    admin.inventory -= params[:num_beers].to_i
+    admin.save
     user = current_user
     user.beer_count += params[:num_beers].to_i
     @current_beers = params[:num_beers].to_i
