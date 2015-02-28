@@ -4,24 +4,24 @@
     </div>
   <!-- Buy beer button & form -->
     <div class="col-md-4">
-      <form action="/charge" method="POST">
+      <form method="POST" action="/user/buy_beer">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="pk_test_Zp4xSsxUyGGq98so2JnstSnY"
-          data-image="/img/documentation/checkout/marketplace.png"
+          data-image="/img/background_texture.jpg"
           data-name="BeerCred"
-          data-description="1 Frosty Beer"
+          data-description="we love you"
           data-currency="cad"
           data-amount="250">
         </script>
+        <input type="number" name="num_beers"class="form-control form_input_num_beers" placeholder="Enter # of beers">
       </form>
     </div>
     <div class="col-md-4">
     </div>
   </div>
 </div>
-
-
+  
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
@@ -58,9 +58,4 @@
 
 
 
-<!-- <form method="POST" action="/user/buy_beer">
-        <button type="submit" class="btn btn-primary btn-buybeer">
-          Buy beer!
-        </button>
-          <input type="number" name="num_beers"class="form-control form_input_num_beers" placeholder="Enter # of beers">
-      </form> -->
+<!--  -->
