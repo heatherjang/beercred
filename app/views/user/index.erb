@@ -15,7 +15,7 @@
           data-email=<%= current_user.email %>
           data-amount=<%= @current_beers? @current_beers * 250 : 0 %>>
         </script>
-        <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers">
+        <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers to buy">
       </form>
     </div>
     <div class="col-md-4">
@@ -25,35 +25,38 @@
   
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
     </div>
-    <div class="col-md-3">
-      <div class="stats_box">
+    <div class="col-md-4">
+      <div class="white_background_with_margin">
         <h2 class="stats_title">Your BeerCred</h2>
         <h3 class="stats_value"><%= @user.beer_count %></h3>
       </div>
     </div>
-    <div class="leaderboard">
-      <div class="col-md-6">
-        <div class="panel panel-default">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="white_background_with_margin">
           <table class="table table-hover">
-            <caption class="leader_title">Leaderboard</caption>
-            <thead>
-              <tr>
-                <th>BeerFriend</th>
-                <th class="leader_center">BeerCreds</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% top_five_users_on_leaderboard.each_with_index do |user,index| %>
+              <caption class="leader_title">Leaderboard</caption>
+              <thead>
                 <tr>
-                  <td><%= index + 1 %>     <%= user.username %></td>
-                  <td class="leader_center"><%= user.beer_count %></td>
+                  <th>BeerFriend</th>
+                  <th class="leader_center">BeerCreds</th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <% top_five_users_on_leaderboard.each_with_index do |user,index| %>
+                  <tr>
+                    <td><%= index + 1 %>       <%= user.username %></td>
+                    <td class="leader_center"><%= user.beer_count %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+      <div class="col-md-2">  
       </div>
     </div>
   </div>

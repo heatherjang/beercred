@@ -185,12 +185,12 @@
 
 
 /* Steve's code */
-.leaderboard {
-   background-color: #FDFDFD;
+.white_background_with_margin {
+  background-color: #FDFDFD;
 }
 
 .leader_center {
-  
+  text-align: center;
 }
 
 .leader_title {
