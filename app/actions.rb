@@ -73,6 +73,15 @@ get '/admin' do
   erb :'/admin/index'
 end
 
+post '/admin/update_inventory' do
+  if params[:num_beers].to_i >= 0
+    admin = current_admin
+    admin.inventory = params[:num_beers]
+    admin.save
+  end
+  redirect '/admin'
+end
+
 get '/user/new' do
   redirect '/'
 end
