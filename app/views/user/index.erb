@@ -3,21 +3,27 @@
     <div class="col-md-4">
     </div>
   <!-- Buy beer button & form -->
-    <div class="col-md-4">
-      <form method="POST" action="/user/buy_beer">
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_Zp4xSsxUyGGq98so2JnstSnY"
-          data-image="/img/background_texture.jpg"
-          data-name="BeerCred"
-          data-description="we love you"
-          data-currency="cad"
-          data-email=<%= current_user.email %>
-          data-amount=<%= @current_beers? @current_beers * 250 : 0 %>>
-        </script>
-        <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers to buy" min="0" max="<%= current_admin.inventory %>">
-      </form>
-    </div>
+    <% if current_admin.inventory > 0 %>
+      <div class="col-md-4">
+        <form method="POST" action="/user/buy_beer">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_Zp4xSsxUyGGq98so2JnstSnY"
+            data-image="/img/background_texture.jpg"
+            data-name="BeerCred"
+            data-description="we love you"
+            data-currency="cad"
+            data-email=<%= current_user.email %>
+            data-amount=<%= @current_beers? @current_beers * 250 : 0 %>>
+          </script>
+          <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers to buy" min="0" max="<%= current_admin.inventory %>">
+        </form>
+      </div>
+    <% else %>
+      <div class="col-md-4 text-center bg-danger">
+        <h1>No beer in fridge! Contact bartender!</h1>
+      </div>
+    <% end %>
     <div class="col-md-4">
     </div>
   </div>
