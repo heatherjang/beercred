@@ -46,7 +46,7 @@
         </div>
       <% end %>
       <form method="POST" action="/admin/update_inventory">
-        <input type="number" name="num_beers" class="inline-form" placeholder="<%= current_admin.inventory %>">
+        <input type="number" name="num_beers" class="inline-form" value="<%= current_admin.inventory %>">
         <button type="submit" class="btn btn-success">Update Inventory</button>
       </form>
     </div>
