@@ -183,11 +183,16 @@
 
 /* Admin */
 .inventory {
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+  border: solid #f0bb3b 8px;
 }
 
 .okay {
-  background-color: green;
+  background: rgba(203, 240, 59, 0.7);
 }
 
 .low {

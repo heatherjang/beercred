@@ -3,12 +3,12 @@
     <div class="col-md-1">
     </div>
   <!-- Displays inventory status -->
-
-    <div class="col-md-4">
+    <div class="col-md-3">
       <% if current_admin.inventory >= 12 %>
-      
+
+        <h2 class="stats_title">Inventory Status</h2>
         <div class="inventory okay">
-          <h2 class="inventory_title">Your inventory is okay </h2>
+          <h2 class="inventory_title">Okay</h2>
           <h3 class="inventory_title"> Beers remaining: </h3>
           <h4 class="inventory_value"><%= current_admin.inventory %></h4>
         </div>
@@ -31,7 +31,7 @@
       </div>
     </div>
   <!-- Displays total beer purchases ($) -->
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h2 class="stats_title">Revenue</h2>
       <div class="stats_box stats_box_admin_size">
         <h3 class="stats_value">$ <%= @users.sum(:beer_count) * 2.50 %></h3>
