@@ -5,6 +5,9 @@ $(document).ready(function() {
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
    
     <!
+        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    
     <script type="text/javascript">
