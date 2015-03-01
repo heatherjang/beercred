@@ -33,7 +33,7 @@ end
 
 get '/' do
   if logged_in?
-    redirect '/user/:id'
+    redirect "/user/#{current_user.id}"
   else
     erb :index
   end
