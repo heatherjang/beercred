@@ -5,6 +5,18 @@
   font-family: Intrique; 
   src: url('../fonts/Intrique.ttf');
 }
+@font-face {
+  font-family: BigNoodle; 
+  src: url('../fonts/big_noodle_titling.ttf');
+}
+@font-face {
+  font-family: Marc; 
+  src: url('../fonts/Marc.ttf');
+}
+@font-face {
+  font-family: Elkwood; 
+  src: url('../fonts/Elkwood.ttf');
+}
 
 .stats_box {
   height: 100%;
@@ -141,6 +153,7 @@ text-shadow: black 0.1em 0.1em 0.2em;
 .navbar-inverse .navbar-collapse, .navbar-yellow {
   background-color: #eabc00;
   background-image: linear-gradient(to bottom, #eabc00 0, #eabc00 100%) ;
+
   min-height: 100px;
 }
 
@@ -196,8 +209,26 @@ text-shadow: black 0.1em 0.1em 0.2em;
   width: 400px;
   height: 400px;
   border-radius: 200px;
-  background: radial-gradient(#f0bb3b 85%, #785d1d 15%);
-  /*background-color: #f0bb3b;*/
+  background: -webkit-radial-gradient(#f0bb3b 5%, #f0bb3b 15%, #f0bb3b 15%, #a88229 60%);
+  background: -o-radial-gradient(#f0bb3b 5%, #f0bb3b 15%, #f0bb3b 15%, #a88229 60%);
+  background: -moz-radial-gradient(#f0bb3b 5%, #f0bb3b 15%, #f0bb3b 15%, #a88229 60%);
+  background: radial-gradient(#f0bb3b 5%, #f0bb3b 15%, #f0bb3b 15%, #a88229 60%);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 
+    inset 0 2px 3px rgba(255,255,255,0.3), 
+    inset 0 -2px 3px rgba(0,0,0,0.3),
+    0 1px 1px rgba(255,255,255,0.9);
+}
+
+.beer_button_text{
+  font-family: BigNoodle;
+  font-size: 100px;
+  font-weight: 900px;
+  background-image: url('../img/bar.jpeg');
+  text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+    -webkit-background-clip: text;
+    /*-webkit-text-fill-color: transparent;*/
+
 }
 
 .buy_beer:hover {
