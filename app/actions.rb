@@ -68,6 +68,13 @@ post '/user/buy_beer' do
   redirect "user/#{current_user.id}"
 end
 
+get '/logout' do
+  if logged_in?
+    session[:user_id] = nil
+  end
+  redirect '/'
+end
+
 get '/admin' do
   @users = User.all
   erb :'/admin/index'
