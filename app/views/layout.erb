@@ -36,7 +36,7 @@
             <div class="col-md-2">
               <div class="btn-group float_right drop_button_position">
               <!-- #erb# username on button-->
-                <a href="/user/"><button type="button" class="btn btn-default btn_transparent"><%=current_user.username%></button></a>
+                <a href="/user/"><button type="button" class="btn btn-default btn_yellow"><%=current_user.username%></button></a>
                 <button type="button" class="btn btn-default dropdown-toggle btn_transparent" data-toggle="dropdown" aria-expanded="true">
                   <span class="caret"></span>
                   <span class="sr-only">Toggle Dropdown</span>
@@ -47,6 +47,7 @@
                     <li class="divider"></li>
                     <li><a href="#">Logout</a></li>
                   </ul>
+                </div>
               </div>
           <!-- If not logged in -->
           <% else %>
@@ -60,7 +61,7 @@
                 <div class="form-group">
                   <input type="password" class="form-control" name="password" id="LoginPassword" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-default btn_background">Login</button>
+                <button type="submit" class="btn btn-default btn_background"><strong>Login</strong></button>
               </form>
             </div>
           <% end %>

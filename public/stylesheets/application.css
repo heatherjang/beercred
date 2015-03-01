@@ -47,10 +47,11 @@
 
 .logo_link {
   font-family: Intrique;
-  font-size: 70px;
+  font-size: 90px;
   font-weight 900;
   color: #f0bb3b;
-  transition: 0.2s
+  transition: 0.5s;
+  text-decoration: none;
 }
 
 .logo_link:visited {
@@ -58,12 +59,13 @@
 }
 
 .logo_link:hover {
-  text-decoration: none;
   opacity: 0.85;
+  text-decoration: none;
 }
 
 .logo_link:active {
   color: #f0bb3b;
+  text-decoration: none;
 }
 
 .drop_button_position {
@@ -74,6 +76,13 @@
     background-color: transparent;
     border: 2px solid #604a17;
     color: white;
+    font-size: 15px;
+}
+
+.btn_yellow {
+    background-color: #f0bb3b;
+    border: 2px solid #604a17;
+    color: black;
     font-size: 15px;
 }
 
@@ -203,6 +212,19 @@
   text-align: center;
   width: 100%;
   background-color: #FDFDFD;
+}
+
+.quote_text {
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight 200;
+  color: #f0bb3b;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.indent {
+  padding-left: 1em;
 }
 
 
