@@ -7,8 +7,8 @@
 }
 
 .stats_box {
-  height: 100%;
-  width: 100%;
+  height: 100px;
+  width: 50px;
   background: rgba(34, 34, 34, .4);
   border-radius: 10px;
     -webkit-border-radius: 12px;
@@ -40,8 +40,8 @@
 }
 
 .stats_box_admin_size {
-  width: 90%;
-  height: 150px;
+  width: 80%;
+  height: 200px;
   }
 
 .position_fixed {
@@ -202,14 +202,6 @@ text-shadow: black 0.1em 0.1em 0.2em;
 
 
 /* Admin */
-.inventory {
-  height: 100%;
-  width: 90%;
-  border-radius: 10px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-  border: solid #f0bb3b 4px;
-}
 
 .okay {
   background: rgba(203, 240, 59, 0.8);
@@ -232,12 +224,26 @@ text-shadow: black 0.1em 0.1em 0.2em;
   font-size: 3em;
   font-weight: 900;
   text-align: center;
+  vertical-align: center;
+}
+
+.table-scroll {  
+    height: 200px !important;
+    overflow: scroll;
+}​
+
+.btn-inventory {
+  margin: 10px;
+}
+
+.table-margin {
+  margin-top: 50px;
 }
 
 
 /* Steve's code */
-.white_background_with_margin {
-  background-color: #FDFDFD;
+.table-background {
+  text-shadow: rgba(10, 10, 10, 0.5)
 }
 
 .leader_center {
