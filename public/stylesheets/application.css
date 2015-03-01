@@ -195,9 +195,22 @@ text-shadow: black 0.1em 0.1em 0.2em;
 .buy_beer {
   width: 400px;
   height: 400px;
-  border-radius: 30px;
-  background-color: green;
+  border-radius: 200px;
+  background: radial-gradient(#f0bb3b 85%, #785d1d 15%);
+  /*background-color: #f0bb3b;*/
 }
+
+.buy_beer:hover {
+
+}
+
+.buy_beer:active {
+
+}
+
+
+
+
 
 
 /* Admin */
