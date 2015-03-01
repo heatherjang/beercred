@@ -15,7 +15,7 @@
     <div class="col-md-3">
       <h2 class="stats_title">Revenue</h2>
       <div class="stats_box stats_box_admin_size">
-        <h3 class="stats_value"><%= @users.sum(:beer_count) * 2.50 %></h3>
+        <h3 class="stats_value">$ <%= @users.sum(:beer_count) * 2.50 %></h3>
       </div>
     </div>
     <div class="col-md-2">

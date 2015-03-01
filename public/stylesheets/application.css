@@ -25,13 +25,17 @@
   color: #f0bb3b;
     -webkit-text-stroke: 1px #f0bb3b;
   margin-bottom: -6px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .stats_value {
   font-family: Helvetica;
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 900;
+  letter-spacing: 2px;
+  color: #f0bb3b;
+    -webkit-text-stroke: 4px #f0bb3b;
+  text-align: center;
 }
 
 .stats_box_admin_size {
