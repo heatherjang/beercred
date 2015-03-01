@@ -4,7 +4,7 @@
     </div>
   <!-- Buy beer button & form -->
     <% if current_admin.inventory > 0 %>
-      <div class="col-md-4">
+      <div class="col-md-4 btn-padding">
         <form method="POST" action="/user/buy_beer">
           <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"

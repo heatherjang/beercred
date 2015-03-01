@@ -61,6 +61,7 @@
 .logo_box {
   margin-top: -5px;
   padding-bottom: 10px;
+text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .logo_link {
@@ -77,7 +78,7 @@
 }
 
 .logo_link:hover {
-  opacity: 0.85;
+  opacity: 0.7;
   text-decoration: none;
 }
 
@@ -160,7 +161,7 @@
 }
 
 .background_colour_overlay {
-    background-color: rgba(34, 34, 34, 0.6);
+    background-color: rgba(50, 50, 50, 0.7);
     height: 100%;
     width: 100%;
 }
@@ -170,10 +171,12 @@
 .thirsty {
   font-size: 50px;
   color: #f0bb3b;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .call_to_action {
   color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 
@@ -239,15 +242,20 @@
 
 .quote_text {
   font-family: Helvetica;
+  text-shadow: rgba(5,5,5,1);
   font-size: 40px;
   font-weight 200;
-  color: #f0bb3b;
+  color: #f7DD9D;
   transition: 0.5s;
-  text-decoration: none;
 }
 
 .indent {
   padding-left: 1em;
+}
+
+.btn-padding {
+
+  padding-top: 30px;
 }
 
 
