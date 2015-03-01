@@ -5,14 +5,18 @@
       <% if current_admin.inventory >= 12 %>
         <h2 class="stats_title">Inventory Status</h2>
           <div class="stats_box stats_box_admin_size okay">
-            <h2 class="inventory_title">Okay</h2>
-            <h4 class="inventory_value"><%= current_admin.inventory %></h4>
+            <h4 class="stats_value"><%= current_admin.inventory %></h4>
           </div>
       <% else %>
         <h2 class="stats_title">Inventory</h2>
         <div class="stats_box stats_box_admin_size low">
-          <h2 class="inventory_title">Restock soon!</h2>
-          <h4 class="inventory_value"><%= current_admin.inventory %></h4>
+          <h4 class="inventory_value"><%= current_admin.inventory %>
+          <br>
+          <% if current_admin.inventory == 0 %>
+            EMPTY!</h4>
+          <% else %>
+            LOW!</h4>
+          <% end %>
         </div>
       <% end %>
     </div>
@@ -28,7 +32,7 @@
     <div class="col-md-4">
       <h2 class="stats_title">Revenue</h2>
       <div class="stats_box stats_box_admin_size">
-        <h3 class="stats_value">$ <%= @users.sum(:beer_count) * 2.50 %></h3>
+        <h3 class="stats_value">$ <%= "%.2f" % (@users.sum(:beer_count) * 2.5) %></h3>
       </div>
     </div>
   </div>
@@ -38,10 +42,13 @@
   <div class="row">
   <!-- Displays inventory status & total inventory -->
     <div class="col-md-4">
-      <form method="POST" action="/admin/update_inventory">
-        <input type="number" name="num_beers" class="inline-form" value="<%= current_admin.inventory %>">
-        <button type="submit" class="btn btn-success"><div class="btn-inventory">Update Inventory</div></button>
-      </form>
+      <div class="inventory-update">
+        <form method="POST" action="/admin/update_inventory">
+          <button type="submit" class="btn btn-primary btn-lg"><div class="btn-inventory">Update Inventory</div></button><br>
+          <input type="number" name="num_beers" class="inline-form col-md-4 input-lg" placeholder="Enter #">
+          
+        </form>
+      </div> 
     </div>
     <div class="col-md-4">
     </div>
@@ -62,8 +69,8 @@
             <table class="table table-condensed table-bordered table-hover">
               <tr>
                 <th>User</th>
-                <th class="leader_center">Beers bought</th>
-                <th class="leader_center">$$ spent</th>
+                <th class="leader_center">Qty.</th>
+                <th class="leader_center">$ Spent</th>
               </tr>
               <% users = all_users_by_beer_count %>
               <% users.each do |user| %>
@@ -71,7 +78,7 @@
                 <tr>
                   <td><%= user.username %></td>
                   <td class="leader_center"><%= user.beer_count %></td> 
-                  <td class="leader_center"><%= user.beer_count * 2.5 %></td>
+                  <td class="leader_center"><%= "%.2f" % (user.beer_count * 2.5) %></td>
                 </tr>
               <!-- #erb# end -->
               <% end %>

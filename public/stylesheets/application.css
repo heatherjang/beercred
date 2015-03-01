@@ -14,6 +14,7 @@
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
   border: solid #f0bb3b 4px;
+  margin-left: 45px;
 }
 
 .stats_title {
@@ -24,25 +25,26 @@
   letter-spacing: 1px;
   color: #f0bb3b;
     -webkit-text-stroke: 1px #f0bb3b;
-/*  margin-bottom: -6px;
-  margin-left: 15px;*/
+  margin-bottom: -2px;
   text-align: center;
 }
 
 .stats_value {
   font-family: Helvetica;
   font-size: 5em;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
   color: #f0bb3b;
-    -webkit-text-stroke: 4px #f0bb3b;
+    -webkit-text-stroke: 1px #f0bb3b;
   text-align: center;
+  margin-top: 60px;
+  text-shadow: rgba(20,20,20,0.9);
 }
 
 .stats_box_admin_size {
   width: 80%;
   height: 200px;
-  }
+}
 
 .position_fixed {
   position: static;
@@ -222,10 +224,14 @@ text-shadow: black 0.1em 0.1em 0.2em;
 .inventory_value {
   font-family: Helvetica;
   font-size: 3em;
-  font-weight: 900;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #f0bb3b;
+    -webkit-text-stroke: 1px #f0bb3b;
   text-align: center;
-  vertical-align: center;
+  margin-top: 50px;
 }
+
 
 .table-scroll {  
     height: 200px !important;
@@ -237,13 +243,18 @@ text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .table-margin {
-  margin-top: 50px;
+  margin-top: 5px;
 }
+
+.inventory-update {
+  margin: 20px 0px 0px 80px;
+}
+
 
 
 /* Steve's code */
 .table-background {
-  text-shadow: rgba(10, 10, 10, 0.5)
+  background-color: transparent;
 }
 
 .leader_center {
