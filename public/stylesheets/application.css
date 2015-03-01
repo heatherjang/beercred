@@ -194,9 +194,9 @@ text-shadow: black 0.1em 0.1em 0.2em;
 
 .buy_beer {
   width: 400px;
-  height: 400px;
+  height: 100px;
   border-radius: 30px;
-  background-color: green;
+  background-color: #f0bb3b;
 }
 
 
