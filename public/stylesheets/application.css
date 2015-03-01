@@ -25,7 +25,7 @@
   color: #f0bb3b;
     -webkit-text-stroke: 1px #f0bb3b;
   margin-bottom: -6px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .stats_value {
@@ -39,7 +39,7 @@
 }
 
 .stats_box_admin_size {
-  width: 100%;
+  width: 90%;
   height: 150px;
   }
 
@@ -193,7 +193,7 @@
 /* Admin */
 .inventory {
   height: 100%;
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -201,11 +201,11 @@
 }
 
 .okay {
-  background: rgba(203, 240, 59, 0.7);
+  background: rgba(203, 240, 59, 0.5);
 }
 
 .low {
-  background-color: red;
+  background: rgba(240, 96, 59, 0.5)
 }
 
 .inventory_title {
