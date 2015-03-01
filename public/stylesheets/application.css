@@ -9,14 +9,6 @@
   font-family: BigNoodle; 
   src: url('../fonts/big_noodle_titling.ttf');
 }
-@font-face {
-  font-family: Marc; 
-  src: url('../fonts/Marc.ttf');
-}
-@font-face {
-  font-family: Elkwood; 
-  src: url('../fonts/Elkwood.ttf');
-}
 
 .stats_box {
   height: 100px;
@@ -205,10 +197,13 @@ text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .form_input_num_beers {
-  width: 75%;
+  margin-top: 20px;
+  margin-left: 135px;
 }
 
 .buy_beer {
+  margin-top: -10px;
+  margin-left: 90px;
   width: 278px;
   height: 278px;
   border-radius: 200px;
@@ -258,15 +253,6 @@ text-shadow: black 0.1em 0.1em 0.2em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Admin */
