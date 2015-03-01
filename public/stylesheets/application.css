@@ -5,6 +5,18 @@
   font-family: Intrique; 
   src: url('../fonts/Intrique.ttf');
 }
+@font-face {
+  font-family: BigNoodle; 
+  src: url('../fonts/big_noodle_titling.ttf');
+}
+@font-face {
+  font-family: Marc; 
+  src: url('../fonts/Marc.ttf');
+}
+@font-face {
+  font-family: Elkwood; 
+  src: url('../fonts/Elkwood.ttf');
+}
 
 .stats_box {
   height: 100px;
@@ -144,6 +156,7 @@ text-shadow: black 0.1em 0.1em 0.2em;
 .navbar-inverse .navbar-collapse, .navbar-yellow {
   background-color: #eabc00;
   background-image: linear-gradient(to bottom, #eabc00 0, #eabc00 100%) ;
+
   min-height: 100px;
 }
 
@@ -196,11 +209,64 @@ text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .buy_beer {
-  width: 400px;
-  height: 100px;
-  border-radius: 30px;
-  background-color: #f0bb3b;
+  width: 278px;
+  height: 278px;
+  border-radius: 200px;
+  background: -webkit-radial-gradient(#cbf03b 5%, #cbf03b 15%, #cbf03b 15%, #65781d 60%);
+  background: -o-radial-gradient(#cbf03b 5%, #cbf03b 15%, #cbf03b 15%, #65781d 60%);
+  background: -moz-radial-gradient(#cbf03b 5%, #cbf03b 15%, #cbf03b 15%, #65781d 60%);
+  background: radial-gradient(#cbf03b 5%, #cbf03b 15%, #cbf03b 15%, #65781d 60%);
+  border: 1px solid rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0px 7px 0px rgba(48,37,11,1), 0px 9px 25px rgba(0,0,0,.7);
+  -moz-box-shadow: 0px 7px 0px rgba(48,37,11,1), 0px 9px 25px rgba(0,0,0,.7);
+  box-shadow: 0px 7px 0px rgba(48,37,11,1), 0px 9px 25px rgba(0,0,0,.7);
+
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
 }
+
+.buy_beer:hover {
+  background: -webkit-radial-gradient(#daf475 5%, #daf475 15%, #daf475 15%, #65781d 60%);
+  background: -o-radial-gradient(#daf475 5%, #daf475 15%, #daf475 15%, #65781d 60%);
+  background: -moz-radial-gradient(#daf475 5%, #daf475 15%, #daf475 15%, #65781d 60%);
+  background: radial-gradient(#daf475 5%, #daf475 15%, #daf475 15%, #65781d 60%);
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.3)
+}
+
+.buy_beer:active {
+  background: -webkit-radial-gradient(#8ea829 5%, #8ea829 15%, #8ea829 15%, #516017 60%);
+  background: -o-radial-gradient(#8ea829 5%, #8ea829 15%, #8ea829 15%, #516017 60%);
+  background: -moz-radial-gradient(#8ea829 5%, #8ea829 15%, #8ea829 15%, #516017 60%);
+  background: radial-gradient(#8ea829 5%, #8ea829 15%, #8ea829 15%, #516017 60%);
+  -webkit-box-shadow: 0px 3px 0px rgba(48,37,11,1), 0px 3px 6px rgba(0,0,0,.9);
+  -moz-box-shadow: 0px 3px 0px rgba(48,37,11,1), 0px 3px 6px rgba(0,0,0,.9);
+  box-shadow: 0px 3px 0px rgba(48,37,11,1), 0px 3px 6px rgba(0,0,0,.9);
+  position: relative;
+  top: 6px;
+}
+
+.beer_button_text{
+  font-family: BigNoodle;
+  font-size: 85px;
+  font-weight: 900px;
+  line-height: 90%;
+  background-image: url('../img/bar.jpeg');
+  text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* Admin */

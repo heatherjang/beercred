@@ -9,38 +9,37 @@
     <!-- Custom button -->
           <script src="https://checkout.stripe.com/v2/checkout.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+          <button id="beerButton" class="buy_beer"><p class="beer_button_text">Buy<br/>Beer</p></button>
+            <script>
+              $('#beerButton').click(function(){
+                var token = function(res){
+                  var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+                  $('form').append($input).submit();
+                };
 
-          <button id="beerButton" class="buy_beer">Buy Beer</button>
-           <script>
-            $('#beerButton').click(function(){
-              var token = function(res){
-                var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-                $('form').append($input).submit();
-              };
+                StripeCheckout.open({
+                  key:         'pk_test_Zp4xSsxUyGGq98so2JnstSnY',
+                  amount:      250,
+                  currency:    'CAD',
+                  name:        'BeerCred',
+                  description: 'We love you',
+                  panelLabel:  'Pay now',
+                  token:       token
+                });
 
-              StripeCheckout.open({
-                key:         'pk_test_Zp4xSsxUyGGq98so2JnstSnY',
-                amount:      250,
-                currency:    'CAD',
-                name:        'BeerCred',
-                description: 'We love you',
-                panelLabel:  'Pay now',
-                token:       token
+                return false;
               });
-
-              return false;
-            });
-          </script>
+            </script>
           <input type="number" name="num_beers" class="form-control form_input_num_beers" placeholder="Enter # of beers to buy" min="0" max="<%= current_admin.inventory %>">
         </form>
-
-
       </div>
+
     <% else %>
       <div class="col-md-4 text-center bg-danger">
         <h1>No beer in fridge! Contact bartender!</h1>
       </div>
     <% end %>
+    
     <div class="col-md-4">
     </div>
   </div>
