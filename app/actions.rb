@@ -32,7 +32,11 @@ helpers do
 end
 
 get '/' do
-  erb :index
+  if logged_in?
+    redirect '/user/:id'
+  else
+    erb :index
+  end
 end
 
 get '/user/:id' do
