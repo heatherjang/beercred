@@ -9,21 +9,39 @@
 .stats_box {
   height: 100%;
   width: 100%;
-  background-color: gray;
+  background: rgba(34, 34, 34, .4);
   border-radius: 10px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+  border: solid #f0bb3b 8px;
 }
 
 .stats_title {
   font-family: Helvetica;
-  font-size: 1.75em;
-  font-weight: 500;
+  font-variant: small-caps;
+  font-size: 2.25em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #f0bb3b;
+    -webkit-text-stroke: 1px #f0bb3b;
+  margin-bottom: -6px;
+  margin-left: 15px;
 }
 
 .stats_value {
   font-family: Helvetica;
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 900;
+  letter-spacing: 2px;
+  color: #f0bb3b;
+    -webkit-text-stroke: 4px #f0bb3b;
+  text-align: center;
 }
+
+.stats_box_admin_size {
+  width: 90%;
+  height: 150px;
+  }
 
 .position_fixed {
   position: static;
@@ -74,10 +92,10 @@ text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .btn_transparent {
-    background-color: transparent;
-    border: 2px solid #604a17;
-    color: white;
-    font-size: 15px;
+  background-color: transparent;
+  border: 2px solid #604a17;
+  color: white;
+  font-size: 15px;
 }
 
 .btn_yellow {
@@ -177,15 +195,20 @@ text-shadow: black 0.1em 0.1em 0.2em;
 
 /* Admin */
 .inventory {
+  height: 100%;
+  width: 90%;
   border-radius: 10px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+  border: solid #f0bb3b 8px;
 }
 
 .okay {
-  background-color: green;
+  background: rgba(203, 240, 59, 0.5);
 }
 
 .low {
-  background-color: red;
+  background: rgba(240, 96, 59, 0.5)
 }
 
 .inventory_title {
