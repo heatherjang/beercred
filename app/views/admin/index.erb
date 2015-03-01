@@ -14,7 +14,7 @@
         </div>
       
       <% else %>
-        <h2 class="stats_title">Inventory Status</h2>
+        <h2 class="stats_title">Inventory</h2>
         <div class="inventory low">
           <h2 class="inventory_title">Restock!</h2>
           <h3 class="inventory_title"> Beers remaining: </h3>
@@ -25,7 +25,7 @@
 
   <!-- Displays total beer # purchases (count) -->
     <div class="col-md-3">
-      <h2 class="stats_title">Beers Bought</h2>
+      <h2 class="stats_title">Purchased</h2>
       <div class="stats_box stats_box_admin_size">
         <h3 class="stats_value"><%= @users.sum(:beer_count) %></h3>
       </div>
@@ -48,27 +48,6 @@
     </div>
   <!-- Displays inventory status & total inventory -->
     <div class="col-md-4">
-      <% if current_admin.inventory >= 12 %>
-      
-        <div class="inventory okay">
-          <h2 class="inventory_title">Your inventory is okay </h2>
-          <h3 class="inventory_title"> Beers remaining: </h3>
-          <h4 class="inventory_value"><%= current_admin.inventory %></h4>
-        </div>
-      
-      <% else %>
-
-        <div class="inventory low">
-          <h2 class="inventory_title">Restock!</h2>
-          <h3 class="inventory_title"> Beers remaining: </h3>
-          <h4 class="inventory_value"><%= current_admin.inventory %></h4>
-        </div>
-      <% end %>
-
-
-
-
-
       <form method="POST" action="/admin/update_inventory">
         <input type="number" name="num_beers" class="inline-form" value="<%= current_admin.inventory %>">
         <button type="submit" class="btn btn-success">Update Inventory</button>
@@ -82,28 +61,32 @@
 <!-- User stats table: Consumer name, # beers bought, $spent -->
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-4">
     </div>
-    <div class="col-md-8">
-      <table class="table table-bordered table-hover bg-success">
-        <tr>
-          <th>User</th>
-          <th>Beers bought</th>
-          <th>$$ spent</th>
-        </tr>
-        <% users = all_users_by_beer_count %>
-        <% users.each do |user| %>
-        <!-- #erb# for each user do-->
-          <tr>
-            <td><%= user.username %></td>
-            <td><%= user.beer_count %></td> 
-            <td><%= user.beer_count * 2.5 %></td>
-          </tr>
-        <!-- #erb# end -->
-        <% end %>
-      </table>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="white_background_with_margin">
+          <table class="table table-condensed table-bordered table-hover">
+            <tr>
+              <th>User</th>
+              <th class="leader_center">Beers bought</th>
+              <th class="leader_center">$$ spent</th>
+            </tr>
+            <% users = all_users_by_beer_count %>
+            <% users.each do |user| %>
+            <!-- #erb# for each user do-->
+              <tr>
+                <td><%= user.username %></td>
+                <td class="leader_center"><%= user.beer_count %></td> 
+                <td class="leader_center"><%= user.beer_count * 2.5 %></td>
+              </tr>
+            <!-- #erb# end -->
+            <% end %>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-4">
     </div>
   </div>
 </div>
