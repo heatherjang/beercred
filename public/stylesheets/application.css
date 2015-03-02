@@ -198,7 +198,7 @@
 
 .form_input_num_beers {
   margin-top: 20px;
-  margin-left: 185px;
+  margin-left: 180px;
   height: 70px;
   width: 25%;
   border-radius: 10px;
@@ -291,7 +291,7 @@
 }
 
 .stats_title_beercred {
-  float: left;
+  margin-left: 150px;
   opacity: 0.7;
 }
 
@@ -301,16 +301,15 @@
   font-weight: 600;
   letter-spacing: 2px;
   color: rgba(255,255,255,0.6);
-  margin-top: 90px;
-  margin-left: 90px;
+  margin-top: 40px;
+  margin-left: 250px;
   text-shadow: rgba(20,20,20,0.9);
 }
 
 .user_stats {
-  margin-top: -200px;
+  margin-top: 250px;
   position: relative;
 }
-
 
 /* Admin */
 
@@ -394,8 +393,18 @@
 
 .table-margin {
   margin-top: 15px;
-  float: right;
+  margin-left: 55px;
   width: 75%;
+}
+
+.table-margin-user {
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 75%;
+}
+
+.beercred-margin {
+  margin-left: 20px;
 }
 
 table {

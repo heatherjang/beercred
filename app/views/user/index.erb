@@ -1,6 +1,9 @@
-<div class="container-fluid">
+<div class="container-fluid buy_container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 user_stats">
+      <!-- Your Beercred stats box -->
+      <h2 class="stats_title stats_title_beercred">Your BeerCred</h2>
+      <h4 class="stats_beercred"><%= @user.beer_count %></h4>
     </div>
     <!-- Buy beer button & form -->
     <% if current_admin.inventory > 0 %>
@@ -31,60 +34,38 @@
             </script>
             
           <input type="number" name="num_beers" class="form-control form_input_num_beers" value="1" min="0" max="<%= current_admin.inventory %>">
-        </form>
+        </form> 
       </div>
-
     <% else %>
-
       <div class="col-md-4 btn-padding">
         <button id="beerButton" class="no_beer">
           <p class="beer_button_text">!Beer</p>
           <p class="no_beer_description">Fridge empty.<br/>Please see manager.</p>
         </button>
       </div>
-
     <% end %>
-    <div class="col-md-4">
+    <div class="col-md-4 user_stats">
+      <div class="panel panel-default table_style table-scroll table-margin-user">
+        <table class="table table-condensed">
+          <caption class="leader_title table_style">Leaderboard</caption>
+          <thead>
+            <tr>
+              <th>BeerFriend</th>
+              <th class="leader_center">BeerCreds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% all_users_by_beer_count.each_with_index do |user,index| %>
+              <tr>
+                <td><%= index + 1 %>       <%= user.username %></td>
+                <td class="leader_center"><%= user.beer_count %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
 
   
-<div class="container-fluid user_stats">
-  <div class="row">
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-4">
-    <!-- Your Beercred stats box -->
-      <h2 class="stats_title stats_title_beercred">Your BeerCred</h2>
-      <h4 class="stats_beercred"><%= @user.beer_count %></h4>
-    </div>
-    <div class="col-md-2">
-    </div> 
-    <div class="col-md-4">
-      <!-- Leaderboard table -->
-        <div class="panel panel-default table_style table-scroll table-margin">
-          <table class="table table-condensed">
-              <caption class="leader_title table_style">Leaderboard</caption>
-              <thead>
-                <tr>
-                  <th>BeerFriend</th>
-                  <th class="leader_center">BeerCreds</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% all_users_by_beer_count.each_with_index do |user,index| %>
-                  <tr>
-                    <td><%= index + 1 %>       <%= user.username %></td>
-                    <td class="leader_center"><%= user.beer_count %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-          </table>
-      </div>
-    </div>
-    <div class="col-md-1">  
-    </div>
-    </div>
-  </div>
-</div>
