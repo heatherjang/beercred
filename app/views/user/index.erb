@@ -30,7 +30,9 @@
                 return false;
               });
             </script>
-          <input type="number" name="num_beers" class="col-md-4 input-lg form_input_num_beers" placeholder="# beers?" min="0" max="<%= current_admin.inventory %>">
+            
+          <input type="number" name="num_beers" class="form-control form_input_num_beers" value="1" min="0" max="<%= current_admin.inventory %>">
+
         </form>
       </div>
 
