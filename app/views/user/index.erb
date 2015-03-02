@@ -36,8 +36,11 @@
 
     <% else %>
 
-      <div class="col-md-4 text-center bg-danger">
-        <h1>No beer in fridge! Contact bartender!</h1>
+      <div class="col-md-4 btn-padding">
+        <button id="beerButton" class="no_beer">
+          <p class="beer_button_text">!Beer</p>
+          <p class="no_beer_description">Fridge empty.<br/>Please see manager.</p>
+        </button>
       </div>
 
     <% end %>
@@ -53,10 +56,8 @@
     </div>
     <div class="col-md-4">
     <!-- Your Beercred stats box -->
-      <h2 class="stats_title">Your BeerCred</h2>
-          <div class="stats_box stats_box_admin_size">
-            <h4 class="stats_value"><%= @user.beer_count %></h4>
-          </div>
+      <h2 class="stats_title stats_title_beercred">Your BeerCred</h2>
+      <h4 class="stats_beercred"><%= @user.beer_count %></h4>
     </div>
     <div class="col-md-2">
     </div> 
