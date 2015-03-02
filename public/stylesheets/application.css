@@ -198,7 +198,7 @@ text-shadow: black 0.1em 0.1em 0.2em;
 
 .form_input_num_beers {
   margin-top: 20px;
-  margin-left: 152px;
+  margin-left: 175px;
   height: 70px;
   width: 25%;
   border-radius: 10px;
@@ -213,8 +213,11 @@ text-shadow: black 0.1em 0.1em 0.2em;
   font-weight: 900;
 }
 
+.form_input_num_beers:focus {
+  border: 5px solid #f0bb3b;
+}
+
 .buy_beer {
-  margin-top: -10px;
   margin-left: 90px;
   width: 278px;
   height: 278px;

@@ -1,12 +1,17 @@
 <div class="container-fluid">
   <div class="row">
+  <!-- You BeerCred stats box -->
     <div class="col-md-4">
+      <h2 class="stats_title">Your BeerCred</h2>
+          <div class="stats_box stats_box_admin_size">
+            <h4 class="stats_value"><%= @user.beer_count %></h4>
+          </div>
     </div>
-  <!-- Buy beer button & form -->
+    <!-- Buy beer button & form -->
     <% if current_admin.inventory > 0 %>
       <div class="col-md-4 btn-padding">
         <form method="POST" action="/user/buy_beer">
-    <!-- Custom button -->
+          <!-- Custom button -->
           <script src="https://checkout.stripe.com/v2/checkout.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
           <button id="beerButton" class="buy_beer"><p class="beer_button_text">Buy<br/>Beer</p></button>
@@ -31,31 +36,17 @@
             </script>
             
           <input type="number" name="num_beers" class="form-control form_input_num_beers" value="1" min="0" max="<%= current_admin.inventory %>">
-
         </form>
       </div>
 
     <% else %>
+
       <div class="col-md-4 text-center bg-danger">
         <h1>No beer in fridge! Contact bartender!</h1>
       </div>
+
     <% end %>
-    
-    <div class="col-md-4">
-    </div>
-  </div>
-</div>
-  
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-4">
-      <h2 class="stats_title">Your BeerCred</h2>
-          <div class="stats_box stats_box_admin_size">
-            <h4 class="stats_value"><%= @user.beer_count %></h4>
-          </div>
-    </div>
+    <!-- Leaderboard table -->
     <div class="col-md-4">
       <div class="panel panel-default table_style table-scroll table-margin">
         <table class="table table-condensed">
@@ -63,7 +54,7 @@
             <thead>
               <tr>
                 <th>BeerFriend</th>
-                <th class="leader_center">BeerCreds</th>
+                <th class="leader_center">BeerCred</th>
               </tr>
             </thead>
             <tbody>
@@ -77,12 +68,7 @@
           </table>
         </div>
       </div>
-      <div class="col-md-2">  
-      </div>
     </div>
+    
   </div>
 </div>
-
-
-
-<!--  -->
