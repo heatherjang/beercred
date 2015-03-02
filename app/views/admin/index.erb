@@ -50,39 +50,23 @@
       </div> 
     </div>
     <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
-</div>
-
-<!-- User stats table: Consumer name, # beers bought, $spent -->
-<div class="container table-margin">
-  <div class="row">
-  <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-      <div class="table-scroll">
-        <div class="panel panel-default">
-          <div class="table-background">
-            <table class="table table-condensed table-bordered table-hover">
+      <div class="table-scroll table-margin">
+        <div class="panel panel-default table_style">
+          <table class="table table-condensed">
+            <tr>
+              <th>User</th>
+              <th class="leader_center">Qty.</th>
+              <th class="leader_center">$ Spent</th>
+            </tr>
+            <% users = all_users_by_beer_count %>
+            <% users.each do |user| %>
               <tr>
-                <th>User</th>
-                <th class="leader_center">Qty.</th>
-                <th class="leader_center">$ Spent</th>
+                <td><%= user.username %></td>
+                <td class="leader_center"><%= user.beer_count %></td> 
+                <td class="leader_center"><%= "%.2f" % (user.beer_count * 2.5) %></td>
               </tr>
-              <% users = all_users_by_beer_count %>
-              <% users.each do |user| %>
-              <!-- #erb# for each user do-->
-                <tr>
-                  <td><%= user.username %></td>
-                  <td class="leader_center"><%= user.beer_count %></td> 
-                  <td class="leader_center"><%= "%.2f" % (user.beer_count * 2.5) %></td>
-                </tr>
-              <!-- #erb# end -->
-              <% end %>
-            </table>
-          </div>
+            <% end %>
+          </table>
         </div>
       </div>
     </div>
@@ -90,6 +74,7 @@
     </div>
   </div>
 </div>
+
 
 
 
