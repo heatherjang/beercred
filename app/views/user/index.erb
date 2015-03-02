@@ -62,28 +62,28 @@
     </div> 
     <div class="col-md-4">
       <!-- Leaderboard table -->
-      <div class="panel panel-default table_style table-scroll table-margin">
-        <table class="table table-condensed">
-            <caption class="leader_title table_style">Leaderboard</caption>
-            <thead>
-              <tr>
-                <th>BeerFriend</th>
-                <th class="leader_center">BeerCreds</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% all_users_by_beer_count.each_with_index do |user,index| %>
+        <div class="panel panel-default table_style table-scroll table-margin">
+          <table class="table table-condensed">
+              <caption class="leader_title table_style">Leaderboard</caption>
+              <thead>
                 <tr>
-                  <td><%= index + 1 %>       <%= user.username %></td>
-                  <td class="leader_center"><%= user.beer_count %></td>
+                  <th>BeerFriend</th>
+                  <th class="leader_center">BeerCreds</th>
                 </tr>
-              <% end %>
-            </tbody>
+              </thead>
+              <tbody>
+                <% all_users_by_beer_count.each_with_index do |user,index| %>
+                  <tr>
+                    <td><%= index + 1 %>       <%= user.username %></td>
+                    <td class="leader_center"><%= user.beer_count %></td>
+                  </tr>
+                <% end %>
+              </tbody>
           </table>
-        </div>
       </div>
-      <div class="col-md-1">  
-      </div>
+    </div>
+    <div class="col-md-1">  
+    </div>
     </div>
   </div>
 </div>
