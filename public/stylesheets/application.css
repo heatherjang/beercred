@@ -1,6 +1,6 @@
 /* General styling */
 
-/* #f0bb3b */
+/* BeerCred yellow: #f0bb3b */
 @font-face {
   font-family: Intrique; 
   src: url('../fonts/Intrique.ttf');
@@ -8,14 +8,6 @@
 @font-face {
   font-family: BigNoodle; 
   src: url('../fonts/big_noodle_titling.ttf');
-}
-@font-face {
-  font-family: Marc; 
-  src: url('../fonts/Marc.ttf');
-}
-@font-face {
-  font-family: Elkwood; 
-  src: url('../fonts/Elkwood.ttf');
 }
 
 .stats_box {
@@ -205,10 +197,25 @@ text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .form_input_num_beers {
-  width: 75%;
+  margin-top: 20px;
+  margin-left: 152px;
+  height: 70px;
+  width: 25%;
+  border-radius: 10px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border: solid #f0bb3b 4px;
+  border: 5px solid #8ea829;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
 }
 
 .buy_beer {
+  margin-top: -10px;
+  margin-left: 90px;
   width: 278px;
   height: 278px;
   border-radius: 200px;
@@ -258,15 +265,6 @@ text-shadow: black 0.1em 0.1em 0.2em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Admin */

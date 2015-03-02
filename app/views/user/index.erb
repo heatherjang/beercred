@@ -29,7 +29,9 @@
                 return false;
               });
             </script>
+            
           <input type="number" name="num_beers" class="form-control form_input_num_beers" value="1" min="0" max="<%= current_admin.inventory %>">
+
         </form>
       </div>
 
@@ -50,7 +52,9 @@
     </div>
     <div class="col-md-4">
       <h2 class="stats_title">Your BeerCred</h2>
-      <h3 class="stats_value"><%= @user.beer_count %></h3>
+          <div class="stats_box stats_box_admin_size">
+            <h4 class="stats_value"><%= @user.beer_count %></h4>
+          </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default table_style table-scroll table-margin">
