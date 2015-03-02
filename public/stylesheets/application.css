@@ -319,9 +319,6 @@ text-shadow: black 0.1em 0.1em 0.2em;
 
 
 /* Steve's code */
-.table-background {
-  background-color: transparent;
-}
 
 .leader_center {
   text-align: center;
@@ -350,6 +347,22 @@ text-shadow: black 0.1em 0.1em 0.2em;
 .btn-padding {
   padding-top: 30px;
 }
+
+
+.table-margin {
+  margin-top: 15px;
+}
+
+table {
+    background-color: transparent;
+}
+
+.table_style {
+  background: none;
+  color: #CCC;
+  border: none;
+}
+
 
 
 
