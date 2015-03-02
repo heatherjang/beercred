@@ -1,11 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-  <!-- You BeerCred stats box -->
     <div class="col-md-4">
-      <h2 class="stats_title">Your BeerCred</h2>
-          <div class="stats_box stats_box_admin_size">
-            <h4 class="stats_value"><%= @user.beer_count %></h4>
-          </div>
     </div>
     <!-- Buy beer button & form -->
     <% if current_admin.inventory > 0 %>
@@ -46,15 +41,34 @@
       </div>
 
     <% end %>
-    <!-- Leaderboard table -->
     <div class="col-md-4">
+    </div>
+  </div>
+</div>
+
+  
+<div class="container-fluid user_stats">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4">
+    <!-- Your Beercred stats box -->
+      <h2 class="stats_title">Your BeerCred</h2>
+          <div class="stats_box stats_box_admin_size">
+            <h4 class="stats_value"><%= @user.beer_count %></h4>
+          </div>
+    </div>
+    <div class="col-md-2">
+    </div> 
+    <div class="col-md-4">
+      <!-- Leaderboard table -->
       <div class="panel panel-default table_style table-scroll table-margin">
         <table class="table table-condensed">
             <caption class="leader_title table_style">Leaderboard</caption>
             <thead>
               <tr>
                 <th>BeerFriend</th>
-                <th class="leader_center">BeerCred</th>
+                <th class="leader_center">BeerCreds</th>
               </tr>
             </thead>
             <tbody>
@@ -68,7 +82,8 @@
           </table>
         </div>
       </div>
+      <div class="col-md-1">  
+      </div>
     </div>
-    
   </div>
 </div>

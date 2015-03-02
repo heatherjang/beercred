@@ -269,6 +269,22 @@ text-shadow: black 0.1em 0.1em 0.2em;
     -webkit-text-fill-color: transparent;
 }
 
+.your_beercred {
+  padding-top: 60px;
+  margin-left: 70px;
+
+}
+
+.stats_beercred {
+  margin-top: ;
+  font-size: 6em;
+}
+
+.user_stats {
+  margin-top: -200px;
+  position: relative;
+}
+
 
 /* Admin */
 
