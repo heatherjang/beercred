@@ -19,3 +19,8 @@ group :development, :test do
 end
 
 gem 'stripe'
+
+# Only for deployment to Heroku
+group :production do
+  gem 'pg'
+end
