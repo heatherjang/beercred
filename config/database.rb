@@ -4,11 +4,13 @@ configure do
     ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
 
-  set :database, {
-    adapter: "sqlite3",
-    database: "db/db.sqlite3"
-  }
-
+  if development?
+    set :database, {
+      adapter: "sqlite3",
+      database: "db/db.sqlite3"
+    }
+  else
+    set :database, ENV['DATABASE_URL']
   # puts "Establishing connection to database ..."
   # ActiveRecord::Base.establish_connection( credentials )
   # puts "CONNECTED"
