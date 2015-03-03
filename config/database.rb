@@ -14,6 +14,7 @@ configure do
   # puts "Establishing connection to database ..."
   # ActiveRecord::Base.establish_connection( credentials )
   # puts "CONNECTED"
+  end
 
 
   # Load all models from app/models, using autoload instead of require
